@@ -3,11 +3,20 @@
 @mixin blog-component-theme($theme) {
   $background: map-get($theme, background);
   $accent: map-get($theme, accent);
+  $is-dark: map-get($theme, is-dark);
 
   $code-background-color: mat-color($background, code);
   $code-block-background-color: mat-color($background, code-block);
 
   .main-content {
+    .post__subheader {
+      @if $is-dark {
+        color: #8b949e;
+      } @else {
+        color: #5b6266;
+      }
+    }
+
     blockquote {
       padding: 0.7rem 1rem 0.7rem 1rem;
       margin-left: 0;
