@@ -68,4 +68,10 @@ export const categories: Category[] = [
     description: '',
     postsMetadata: [],
   },
+  {
+    id: 'methodologies',
+    label: 'Méthodologies',
+    description: '',
+    postsMetadata: [],
+  },
 ];

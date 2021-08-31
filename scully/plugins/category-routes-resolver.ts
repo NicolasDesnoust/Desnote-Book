@@ -21,6 +21,7 @@ const categoryRoutesResolverPlugin: any = async (
     { route: '/categories/vscode' },
     { route: '/categories/spring' },
     { route: '/categories/javascript' },
+    { route: '/categories/methodologies' },
   ];
 };
 
