@@ -137,7 +137,10 @@
 }
 
 @mixin material-core($font-family) {
-  $mat-typography: mat-typography-config($font-family);
+  $mat-typography: mat-typography-config(
+  $font-family: $font-family,
+  $subheading-2: mat-typography-level(1.1rem, 28px, 400),
+);
   @include mat-core($mat-typography); //! A inclure une seule fois
 }
 
