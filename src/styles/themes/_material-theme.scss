@@ -13,6 +13,7 @@
 @import '../app/features/home/containers/home-page.component.theme';
 @import '../app/shared/components/card-list/card-list.component.theme';
 @import '../app/layouts/components/sub-header/sub-header.component.theme';
+@import '../components/scrollbar.theme';
 
 /* Application d'un thème aux éléments HTML natifs */
 @mixin native-element-theme($theme, $name) {
@@ -35,16 +36,9 @@
     border: none;
   }
 
-  h2 .header-link svg {
-    padding-bottom: 0.4rem;
-  }
-  h3 .header-link svg {
-    padding-bottom: 0.2rem;
-  }
-
   button {
     &:hover .header-link svg {
-      color: mat-color($accent);
+      color: mat-color($accent, lighter);
     }
 
     .header-link {
@@ -133,6 +127,7 @@
     @include home-page-component-theme($theme);
     @include card-list-component-theme($theme);
     @include sub-header-component-theme($theme);
+    @include scrollbar-theme($theme);
   }
 }
 

@@ -50,13 +50,13 @@ export class ThemeHandler extends BaseStartupService {
       const oldTheme = this.themeSubject.value;
       this.themeSubject.next(theme);
 
-      const bodyClassList = this.document.querySelector('body').classList;
-      const removeClassList = /\w*-theme\b/.exec(bodyClassList.value);
+      const htmlClassList = this.document.querySelector('html').classList;
+      const removeClassList = /\w*-theme\b/.exec(htmlClassList.value);
       if (removeClassList) {
-        bodyClassList.remove(...removeClassList);
+        htmlClassList.remove(...removeClassList);
       }
       this.logger.info(`Updating theme: ${oldTheme} -> ${theme}`);
-      bodyClassList.add(`${theme}-theme`);
+      htmlClassList.add(`${theme}-theme`);
       localStorage.setItem('theme', theme);
     }
   }
