@@ -15,15 +15,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   `,
   styles: [
     `
-    .copy-button {
-      border: 0;
-      margin: 0;
-      padding: 0;
-      font-size: 1.2em;
-      width: auto;
-      background-color: transparent;
-    }
-  `,
+      .copy-button {
+        padding: 0 0 0 0.9rem;
+        border: 0;
+        margin: 0;
+        font-size: 1.2em;
+        width: auto;
+        background-color: transparent;
+        vertical-align: middle;
+      }
+    `,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -34,11 +34,11 @@ export class MarkdownRenderer extends MarkedRenderer {
     console.log('uslug : ' + id);
 
     return `
-    <h${level} id="${id}">${text}
-      <a name="${escapedText}" class="anchor" routerLink="${id}">
+      <h${level} id="${id}">
+        ${text}<a name="${escapedText}" class="anchor" routerLink="${id}">
         <i-feather name="link-2" class="header-link"></i-feather>
-      </a>
-    </h${level}>
+        </a>
+      </h${level}>
     `;
   }
 }

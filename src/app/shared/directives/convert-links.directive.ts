@@ -30,6 +30,7 @@ export class ConvertLinksDirective {
         const parent = a.parentElement;
         if (parent) {
           const container = this.document.createElement('span');
+          container.classList.add('btn-wrapper');
           const component = this.componentFactoryResolver
             .resolveComponentFactory(RouterLinkComponent)
             .create(this.injector, [], container);
