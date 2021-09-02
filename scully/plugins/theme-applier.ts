@@ -12,10 +12,10 @@ export const THEME_APPLIER_NAME = 'theme-applier';
  * pour l'appliquer au pré-rendu de l'application.
  *
  * NB: L'application d'un thème consiste à placer la classe
- * "<nom-du-theme>-theme" sur le tag <body>.
+ * "<nom-du-theme>-theme" sur le tag <html>.
  */
 const themeApplierPlugin: any = async (html: string, route: HandledRoute) => {
-  const regex = /(<body[^>]*>)/;
+  const regex = /(<html[^>]*>)/;
 
   return html.replace(
     regex,
@@ -23,12 +23,12 @@ const themeApplierPlugin: any = async (html: string, route: HandledRoute) => {
       const theme = localStorage.getItem('theme');
 
       if (theme === 'light' || theme === 'dark') {
-        const bodyClassList = document.querySelector('body').classList;
-        const removeClassList = /\\w*-theme\\b/.exec(bodyClassList.value);
+        const htmlClassList = document.querySelector('html').classList;
+        const removeClassList = /\\w*-theme\\b/.exec(htmlClassList.value);
         if (removeClassList) {
-          bodyClassList.remove(...removeClassList);
+          htmlClassList.remove(...removeClassList);
         }
-        bodyClassList.add(theme + '-theme');
+        htmlClassList.add(theme + '-theme');
       }
     </script>`
   );
