@@ -16,7 +16,6 @@
   &-header-title {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: smaller;
     letter-spacing: 0.05rem;
     font-size: 11px;
   }
@@ -27,9 +26,7 @@
 }
 
 .mat-list-item {
-  padding: 0.3rem 0 0.3rem 0.3rem;
   border-radius: 0;
-  // margin-bottom: 0.5rem;
   height: auto !important;
   padding: 0.5rem 0 0.5rem 0 !important;
 
@@ -53,10 +50,4 @@
   &:hover {
     text-decoration: none;
   }
-
-  // &.active-link {
-  //   span {
-  //     font-weight: 500;
-  //   }
-  // }
 }

@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { isScullyRunning } from '@scullyio/ng-lib';
 import * as screenfull from 'screenfull';
-
 import { Theme } from 'src/app/core/model/theme';
 import { ThemeHandler } from 'src/app/core/services/startup/theme-handler.service';
 import { environment } from 'src/environments/environment';
@@ -37,7 +36,6 @@ export class NavbarComponent {
   }
   onCloseSearchBar() {
     this.showSearchBar = false;
-    console.log("closing searchbar");
   }
 
   navigateToPostPage(option: any) {
@@ -49,7 +47,7 @@ export class NavbarComponent {
       this.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
     );
 
-    this.theme = this.themeHandler.theme; // TODO: make themeHandler.theme an observable
+    this.theme = this.themeHandler.theme;
   }
 
   private get screenfull(): screenfull.Screenfull {

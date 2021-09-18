@@ -1,12 +1,10 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject } from '@angular/core';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-
+import { Theme } from '../../model/theme';
 import { toEnum } from '../../util/enum-utils';
 import { BaseStartupService } from './base-startup.service';
 import { Logger } from './logger.service';
-import { Theme } from '../../model/theme';
 
 /**
  * Service responsable des thèmes de l'application.
@@ -39,7 +37,7 @@ export class ThemeHandler extends BaseStartupService {
     this.logger.info(`Using ${themeToApply} theme`);
     this.updateTheme(themeToApply);
 
-    return of(null); // TODO: change return type
+    return of(null);
   }
 
   /**
@@ -51,7 +49,7 @@ export class ThemeHandler extends BaseStartupService {
       this.themeSubject.next(theme);
 
       const htmlClassList = this.document.querySelector('html').classList;
-      const removeClassList = /\w*-theme\b/.exec(htmlClassList.value);
+      const removeClassList = /\w{0,5}-theme\b/.exec(htmlClassList.value);
       if (removeClassList) {
         htmlClassList.remove(...removeClassList);
       }

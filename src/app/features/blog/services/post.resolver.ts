@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
-import { forkJoin, of } from 'rxjs';
-import { catchError, map, take, tap } from 'rxjs/operators';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { map, take } from 'rxjs/operators';
 import { Post } from 'src/app/core/model/post';
 import { PostService } from 'src/app/core/services/post.service';
 

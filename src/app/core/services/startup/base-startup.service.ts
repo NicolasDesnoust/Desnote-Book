@@ -22,7 +22,7 @@ export abstract class BaseStartupService {
   loadOnStartup(): Observable<void> {
     if (this._loaded) {
       console.log(`${this.constructor.name} already loaded`);
-      throw new Error(); // TODO: dedicated Error
+      throw new Error(`${this.constructor.name} has already been loaded.`);
     } else {
       console.log(`loading ${this.constructor.name} ...`);
       this._loaded = true;
