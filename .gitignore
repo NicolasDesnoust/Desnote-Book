@@ -53,3 +53,4 @@ scully.log
 scully/plugins/*.js
 scully/plugins/*.js.map
 !/dist/static/.nojekyll
+src/assets/scully-routes.json

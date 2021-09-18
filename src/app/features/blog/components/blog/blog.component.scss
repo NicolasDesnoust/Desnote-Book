@@ -11,7 +11,7 @@ $code-blocks-padding: 2rem;
   margin-top: 1.5rem !important;
 }
 
-::ng-deep .main-blog .blog-content markdown > :nth-child(5) {
+::ng-deep .main-blog .blog-content .markdown-content > :nth-child(5) {
   padding-top: 1rem !important;
   margin-top: 0 !important;
 }
@@ -79,13 +79,13 @@ h1 {
   }
 
   ::ng-deep .blog-content {
-    markdown > :nth-child(1),
-    markdown > :nth-child(2),
-    markdown > :nth-child(3) {
+    .markdown-content > :nth-child(1),
+    .markdown-content > :nth-child(2),
+    .markdown-content > :nth-child(3) {
       display: none;
     }
 
-    markdown {
+    .markdown-content {
       @include TABLET_AND_ABOVE_MEDIAQUERY {
         pre {
           padding-top: 0 !important;

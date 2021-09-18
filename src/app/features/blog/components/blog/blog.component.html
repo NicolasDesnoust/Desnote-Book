@@ -17,17 +17,12 @@
       <i-feather name="share"></i-feather>
     </button>
     <mat-menu #shareMenu="matMenu" class="share__menu">
-      <a
-        mat-menu-item
-        target="_blank"
-        href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-      >
+      <a mat-menu-item href="https://twitter.com/share?ref_src=twsrc%5Etfw">
         <fa-icon [icon]="['fab', 'twitter']" size="lg" class="mr-2"></fa-icon
         >Twitter
       </a>
       <a
         mat-menu-item
-        target="_blank"
         href="https://www.facebook.com/sharer/sharer.php?u={{
           window.location.href
         }}"
@@ -41,7 +36,6 @@
       </a>
       <a
         mat-menu-item
-        target="_blank"
         href="https://www.linkedin.com/sharing/share-offsite/?url={{
           window.location.href
         }}"
@@ -67,6 +61,7 @@
   <!-- This is where Scully will inject the static HTML -->
   <div class="blog-content">
     <markdown
+      class="markdown-content"
       emoji
       testDir
       addCodeHeaders
