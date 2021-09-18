@@ -1,0 +1,2 @@
+# Desnote Book
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NicolasDesnoust_Desnote-Book&metric=alert_status)](https://sonarcloud.io/dashboard?id=NicolasDesnoust_Desnote-Book) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=NicolasDesnoust_Desnote-Book&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=NicolasDesnoust_Desnote-Book)
