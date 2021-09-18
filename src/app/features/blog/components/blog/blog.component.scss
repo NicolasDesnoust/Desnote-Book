@@ -98,6 +98,12 @@ h1 {
         }
         div[id^='code-'] {
           border-radius: 0px 0px 0px 4px;
+          > pre {
+            border: 0;
+            padding-top: 0;
+            padding-left: $code-blocks-padding;
+            padding-right: $code-blocks-padding;
+          }
         }
 
         > .code-header,
@@ -113,15 +119,6 @@ h1 {
           margin-left: -$code-blocks-padding;
           margin-right: -$code-blocks-padding;
         }
-
-        div[id^='code-'] {
-          > pre {
-            border: 0;
-            padding-top: 0;
-            padding-left: $code-blocks-padding;
-            padding-right: $code-blocks-padding;
-          }
-        }
       }
     }
 
@@ -134,20 +131,6 @@ h1 {
     .token.class-name {
       text-decoration: none;
     }
-    // pre > code {
-    //   color: #448ca9;
-    // }
-    // .token.number {
-    //   color: #de616c;
-    // }
-    // .token.selector,
-    // .token.attr-name,
-    // .token.string,
-    // .token.char,
-    // .token.builtin,
-    // .token.inserted {
-    //   color: #92e8b8; // #EC8B5B
-    // }
 
     h1 {
       display: none;
@@ -229,7 +212,6 @@ h1 {
         padding: 0;
         margin: 0;
         font-size: 0.9rem;
-        // color: $code-text-color;
         word-break: normal;
         white-space: pre;
         background: transparent;

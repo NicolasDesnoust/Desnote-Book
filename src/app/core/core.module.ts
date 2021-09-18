@@ -1,12 +1,11 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MarkdownModule } from 'ngx-markdown';
-import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-import { ThemeHandler } from './services/startup/theme-handler.service';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
+import { MarkdownModule } from 'ngx-markdown';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+import { ThemeHandler } from './services/startup/theme-handler.service';
 
 @NgModule({
   declarations: [],
@@ -17,7 +16,6 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
     FormsModule,
     MarkdownModule.forChild(),
     LoggerModule.forRoot({
-      // TODO: use runtimeConfig
       level: NgxLoggerLevel.INFO,
       serverLogLevel: NgxLoggerLevel.INFO,
     }),

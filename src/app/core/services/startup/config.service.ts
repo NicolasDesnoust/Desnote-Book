@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import deepmerge from 'deepmerge';
 import { Observable } from 'rxjs';
-import { tap, mapTo } from 'rxjs/operators';
-
-import { Configuration, LoggerLevel } from '../../model/configuration';
+import { mapTo, tap } from 'rxjs/operators';
 import { defaultConfiguration } from '../../data/default-config';
+import { Configuration, LoggerLevel } from '../../model/configuration';
 import { BaseStartupService } from './base-startup.service';
+
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +23,6 @@ export class ConfigService extends BaseStartupService {
     return this._configuration;
   }
 
-  // TODO: valider la configuration
   protected load(): Observable<void> {
     return this.http.get<Configuration>(this._configUrl).pipe(
       tap(

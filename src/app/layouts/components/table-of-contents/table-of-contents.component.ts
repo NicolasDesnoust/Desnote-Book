@@ -1,20 +1,17 @@
 import {
   Component,
-  ElementRef,
   Input,
-  NgZone,
   OnChanges,
   OnDestroy,
   OnInit,
-  SimpleChanges,
+  SimpleChanges
 } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { first, map, tap } from 'rxjs/operators';
-
 import * as Gumshoe from 'gumshoejs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import {
-  TocHeader,
   TableOfContentsService,
+  TocHeader
 } from 'src/app/core/services/table-of-contents.service';
 
 @Component({
@@ -31,11 +28,7 @@ export class TableOfContentsComponent implements OnInit, OnChanges, OnDestroy {
 
   private scrollSpy: Gumshoe;
 
-  constructor(
-    private tocService: TableOfContentsService,
-    private elementRef: ElementRef<HTMLElement>,
-    private zone: NgZone
-  ) {}
+  constructor(private tocService: TableOfContentsService) {}
 
   ngOnInit() {
     const headers$ = this.tocService.tocContent$.pipe(
@@ -48,7 +41,6 @@ export class TableOfContentsComponent implements OnInit, OnChanges, OnDestroy {
 
     headers$.subscribe(this.filteredHeaders$);
 
-    // TODO: unsub / refactor
     this.filteredHeaders$.subscribe((a) => {
       this.setScrollSpy();
     });
@@ -84,17 +76,6 @@ export class TableOfContentsComponent implements OnInit, OnChanges, OnDestroy {
     if (this.scrollSpy) {
       this.scrollSpy.setup();
       this.scrollSpy.detect();
-      return;
     }
-
-    // this.zone.onStable.pipe(first()).subscribe(() => {
-    //   const hostElement = this.elementRef.nativeElement;
-    //   const linkSelector = `${hostElement.tagName}.${hostElement.className} a`;
-    //   this.scrollSpy = new Gumshoe(linkSelector, {
-    //     offset: 64,
-    //     reflow: true,
-    //     navClass: 'li--active',
-    //   });
-    // });
   }
 }

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NGXLogger, NGXLoggerMonitor, NGXLogInterface } from 'ngx-logger';
 import { Observable, of } from 'rxjs';
-
 import { BaseStartupService } from './base-startup.service';
 import { ConfigService } from './config.service';
 
@@ -17,7 +16,6 @@ export class Logger extends BaseStartupService {
     const configuration = this.configService.configuration;
     const obs$ = of(null);
     obs$.subscribe((_) => {
-      // TODO: verify level
       const loggingLevel = configuration.logging.level as number;
 
       this.logger.updateConfig({
@@ -60,10 +58,7 @@ export class Logger extends BaseStartupService {
 }
 
 export class MyLoggerMonitor implements NGXLoggerMonitor {
-  onLog(logObject: NGXLogInterface): void {
-    // console.log(
-    //   'logging stuff to an API if we need a custom transport ',
-    //   logObject
-    // );
+  onLog(_logObject: NGXLogInterface): void {
+    // logging stuff to an API if we need a custom transport
   }
 }

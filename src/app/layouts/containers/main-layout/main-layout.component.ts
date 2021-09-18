@@ -1,17 +1,22 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { DOCUMENT } from '@angular/common';
-import { HostListener, OnDestroy, OnInit } from '@angular/core';
-import { Component, Inject, ViewChild } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Inject,
+  OnDestroy,
+  OnInit,
+  ViewChild
+} from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { isScullyRunning } from '@scullyio/ng-lib';
 import { Observable, Subscription } from 'rxjs';
-
 import { Category } from 'src/app/core/model/category';
 import { CategoryService } from 'src/app/core/services/category.service';
 import {
   MEDIAQUERIES,
   MOBILE_MEDIAQUERY,
-  TABLET_MEDIAQUERY,
+  TABLET_MEDIAQUERY
 } from '../../../../data/mediaqueries';
 
 @Component({
