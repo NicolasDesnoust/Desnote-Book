@@ -10,8 +10,41 @@ $custom-light-theme-background: (
   dialog: #f8f9fb
 );
 
-$light-primary: mat-palette($mat-teal, 600, 400, 700);
-$light-accent: mat-palette($mat-teal, 600, 400, 700);
+$custom-primary: (
+    50 : #e4ebf2,
+    100 : #bcccde,
+    200 : #8faac8,
+    300 : #6288b1,
+    400 : #406fa1,
+    500 : #1e5590,
+    600 : #1a4e88,
+    700 : #16447d,
+    800 : #123b73,
+    900 : #0a2a61,
+    A100 : #94b6ff,
+    A200 : #6194ff,
+    A400 : #2e71ff,
+    A700 : #1460ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$light-primary: mat-palette($custom-primary, 400, 400, 500);
+$light-accent: mat-palette($custom-primary, 400, 400, 500);
 $light-warn: mat-palette($mat-red);
 $light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 
