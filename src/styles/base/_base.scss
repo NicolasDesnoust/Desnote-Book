@@ -42,24 +42,3 @@ h6::before {
   align-items: center;
   display: flex !important;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-right: -40px !important;
-  padding-right: 40px;
-
-  span {
-    margin-left: 0.5rem;
-  }
-
-  &:hover,
-  a:hover {
-    i-feather {
-      visibility: visible;
-    }
-  }
-}

@@ -2,12 +2,12 @@ import { DatePipe } from '@angular/common';
 import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
 import { Category } from 'src/app/core/model/category';
 import { PostMetadata } from 'src/app/core/model/post';
 import { CategoryService } from 'src/app/core/services/category.service';
 import { PostService } from 'src/app/core/services/post.service';
 import { CardItem } from 'src/app/shared/model/card-item';
+
 
 @Component({
   selector: 'app-home-page',
@@ -18,7 +18,7 @@ import { CardItem } from 'src/app/shared/model/card-item';
         description="Carnet de notes personnel de Nicolas Desnoust"
       ></app-page-header>
 
-      <main class="container home-content">
+      <main class="container-md home-content">
         <div class="row d-flex py-4">
           <div class="col-md-12 col-lg-9">
             <app-card-list

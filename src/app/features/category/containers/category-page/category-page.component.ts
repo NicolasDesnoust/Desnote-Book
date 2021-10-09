@@ -3,11 +3,11 @@ import { Component, Inject, LOCALE_ID } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-
 import { Category } from 'src/app/core/model/category';
 import { PostMetadata } from 'src/app/core/model/post';
 import { CategoryService } from 'src/app/core/services/category.service';
 import { CardItem } from 'src/app/shared/model/card-item';
+
 
 @Component({
   selector: 'app-category-page',
@@ -21,7 +21,7 @@ import { CardItem } from 'src/app/shared/model/card-item';
 
         <main
           *ngIf="items$ | async as items"
-          class="container category-page-content"
+          class="container-md category-page-content"
         >
           <app-card-list [items]="items" title="Posts récents"></app-card-list>
         </main>
