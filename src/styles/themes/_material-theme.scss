@@ -15,6 +15,23 @@
 @import '../app/layouts/components/sub-header/sub-header.component.theme';
 @import '../components/scrollbar.theme';
 
+$app-typography: mat-typography-config(
+  $font-family,
+  $display-4: mat-typography-level(112px, 112px, 300, $letter-spacing: 0.4px),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: 0.4px),
+  $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: 0.4px),
+  $display-1: mat-typography-level(34px, 40px, 400, $letter-spacing: 0.4px),
+  $headline: mat-typography-level(24px, 32px, 400, $letter-spacing: 0.4px),
+  $title: mat-typography-level(20px, 28px, 500, $letter-spacing: 0.4px),
+  $subheading-2: mat-typography-level(16px, 28px, 400, $letter-spacing: 0.4px),
+  $subheading-1: mat-typography-level(15px, 24px, 400, $letter-spacing: 0.4px),
+  $body-2: mat-typography-level(14px, 28px, 500, $letter-spacing: 0.4px),
+  $body-1: mat-typography-level(14px, 26px, 400, $letter-spacing: 0.4px),
+  $caption: mat-typography-level(12px, 20px, 400, $letter-spacing: 0.4px),
+  $button: mat-typography-level(14px, 14px, 500, $letter-spacing: 0.4px),
+  $input: mat-typography-level(16px, 1.25, 400, $letter-spacing: 0.4px)
+);
+
 /* Application d'un thème aux éléments HTML natifs */
 @mixin native-element-theme($theme, $name) {
   $accent: map-get($theme, accent);
@@ -22,6 +39,19 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
   $is-dark: map-get($theme, is-dark);
+
+  body,
+  html {
+    font-size: mat-font-size($app-typography, body-1);
+    font-family: mat-font-family($app-typography);
+    line-height: mat-line-height($app-typography, body-1);
+    letter-spacing: mat-letter-spacing($app-typography, body-1);
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
 
   .mat-elevation-z1 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -54,11 +84,17 @@
 
   a {
     color: mat-color($accent, lighter);
+    border-bottom: 1px solid;
 
     &:hover,
     &:hover:visited {
       color: mat-color($accent, lighter);
       text-decoration: none;
+      border-bottom: none;
+    }
+
+    &.mat-menu-item {
+      border-bottom: none;
     }
   }
 
@@ -132,11 +168,7 @@
 }
 
 @mixin material-core($font-family) {
-  $mat-typography: mat-typography-config(
-    $font-family: $font-family,
-    $subheading-2: mat-typography-level(1.1rem, 28px, 400),
-  );
-  @include mat-core($mat-typography); //! A inclure une seule fois
+  @include mat-core($app-typography); //! A inclure une seule fois
 }
 
 @include material-core($font-family);

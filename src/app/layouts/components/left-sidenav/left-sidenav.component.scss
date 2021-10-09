@@ -29,6 +29,7 @@
   border-radius: 0;
   height: auto !important;
   padding: 0.5rem 0 0.5rem 0 !important;
+  border: none;
 
   &:first-of-type {
     margin-top: 0.5rem;
@@ -42,9 +43,10 @@
   }
 
   span {
-    font-size: smaller;
+    font-size: 14px;
     white-space: normal;
     text-overflow: initial;
+    line-height: 22px;
   }
 
   &:hover {
