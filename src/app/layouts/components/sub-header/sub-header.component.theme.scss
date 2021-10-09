@@ -6,7 +6,7 @@
   $accent: map-get($theme, accent);
 
   .sub-navbar {
-    background-color: mat-color($accent, 700) !important;
+    background-color: mat-color($accent, darker) !important;
 
     &-link {
       color: #c9d1d9;

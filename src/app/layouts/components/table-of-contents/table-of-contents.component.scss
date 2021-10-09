@@ -7,6 +7,7 @@
 .toc {
   overflow-y: auto;
   padding-left: 12px;
+  padding-right: 12px;
   border-left-width: 4px;
   border-left-style: solid;
 
@@ -30,12 +31,19 @@
       margin-bottom: 0.5rem;
       list-style-type: none;
       li {
-        margin-top: 0.25rem;
         font-size: 14px;
+        line-height: 20px;
+
+        &:not(:first-child) {
+          margin-top: 0.5rem;
+        }
+
         &.li--for-h3 {
           padding-left: 1.5rem;
         }
         a {
+          border: none;
+
           &:hover {
             text-decoration: none;
           }

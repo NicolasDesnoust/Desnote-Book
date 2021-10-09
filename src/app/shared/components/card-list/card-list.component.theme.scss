@@ -11,8 +11,8 @@
       color: mat-color($foreground, secondary-text);
     }
     &__tag.mat-chip.mat-standard-chip {
-      color: mat-color($accent, 300);
-      background-color: rgba(mat-color($accent, 500), .1);
+      background-color: mat-color($accent, A400, 10%);
+      color: mat-color($accent, lighter);
     }
   }
 }
