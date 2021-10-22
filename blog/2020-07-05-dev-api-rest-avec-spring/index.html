@@ -1,0 +1,1237 @@
+<!DOCTYPE html><html lang="fr" class="light-theme"><script>
+      const theme = localStorage.getItem('theme');
+
+      if (theme === 'light' || theme === 'dark') {
+        const htmlClassList = document.querySelector('html').classList;
+        const removeClassList = /\w*-theme\b/.exec(htmlClassList.value);
+        if (removeClassList) {
+          htmlClassList.remove(...removeClassList);
+        }
+        htmlClassList.add(theme + '-theme');
+      }
+    </script><head><meta name="generator" content="Scully 1.1.0">
+    <meta charset="utf-8">
+    <title>Desnote Book</title>
+    <base href="/Desnote-Book/">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.225em;
+}
+.svg-inline--fa.fa-w-1 {
+  width: 0.0625em;
+}
+.svg-inline--fa.fa-w-2 {
+  width: 0.125em;
+}
+.svg-inline--fa.fa-w-3 {
+  width: 0.1875em;
+}
+.svg-inline--fa.fa-w-4 {
+  width: 0.25em;
+}
+.svg-inline--fa.fa-w-5 {
+  width: 0.3125em;
+}
+.svg-inline--fa.fa-w-6 {
+  width: 0.375em;
+}
+.svg-inline--fa.fa-w-7 {
+  width: 0.4375em;
+}
+.svg-inline--fa.fa-w-8 {
+  width: 0.5em;
+}
+.svg-inline--fa.fa-w-9 {
+  width: 0.5625em;
+}
+.svg-inline--fa.fa-w-10 {
+  width: 0.625em;
+}
+.svg-inline--fa.fa-w-11 {
+  width: 0.6875em;
+}
+.svg-inline--fa.fa-w-12 {
+  width: 0.75em;
+}
+.svg-inline--fa.fa-w-13 {
+  width: 0.8125em;
+}
+.svg-inline--fa.fa-w-14 {
+  width: 0.875em;
+}
+.svg-inline--fa.fa-w-15 {
+  width: 0.9375em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-17 {
+  width: 1.0625em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.svg-inline--fa.fa-w-19 {
+  width: 1.1875em;
+}
+.svg-inline--fa.fa-w-20 {
+  width: 1.25em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: 0.3em;
+  width: auto;
+}
+.svg-inline--fa.fa-border {
+  height: 1.5em;
+}
+.svg-inline--fa.fa-li {
+  width: 2em;
+}
+.svg-inline--fa.fa-fw {
+  width: 1.25em;
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: #ff253a;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  height: 1.5em;
+  line-height: 1;
+  max-width: 5em;
+  min-width: 1.5em;
+  overflow: hidden;
+  padding: 0.25em;
+  right: 0;
+  text-overflow: ellipsis;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: 0;
+  left: 0;
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  right: 0;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  -webkit-transform: scale(0.25);
+          transform: scale(0.25);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+.far.fa-pull-left,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+.far.fa-pull-right,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: 0.4;
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse {
+  color: #fff;
+}</style><link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <style type="text/css">@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfCLw.woff) format('woff');}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k.woff) format('woff');}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4k.woff) format('woff');}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k.woff) format('woff');}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:normal;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k.woff) format('woff');}@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLXOW3pzveS5B3Nd.woff) format('woff');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLzOW3pzveS5B3Nd.woff) format('woff');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLfOW3pzveS5B3Nd.woff) format('woff');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLbOW3pzveS5B3Nd.woff) format('woff');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bitter';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/bitter/v19/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLjOW3pzveS5Bw.woff) format('woff');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');unicode-range:U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/opensans/v26/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+  <link rel="stylesheet" href="styles.5dc2108e6904ca0023f1.css"><style>[_nghost-pfq-c89], app-root-scully[_ngcontent-pfq-c89] { display: block; height: 100% }</style><meta name="keywords" content="Desnote Book, Github, Desnoust, Nicolas, Spring, Java, JEE"><meta name="description" content="Notes personnelles portant sur différentes technologies du web : Java, Jakarta EE, Spring, HTML, SCSS, ..."><meta name="robots" content="index, follow"><script charset="utf-8" src="common-es2015.e3c414be0de2a20381ce.js"></script><script charset="utf-8" src="6-es2015.b0dc23f862669bc3cb1f.js"></script><style>.main-layout-container[_ngcontent-pfq-c87]{min-height:100vh}.main-layout-container[_ngcontent-pfq-c87]   .navbar[_ngcontent-pfq-c87]{height:50px;position:-webkit-sticky;position:sticky;top:0;left:0;z-index:3;display:flex;width:100%;padding:0}@media screen and (min-width:960px){.main-layout-container[_ngcontent-pfq-c87]   .navbar[_ngcontent-pfq-c87]{box-shadow:unset}}.main-layout-container[_ngcontent-pfq-c87]   .sub-header[_ngcontent-pfq-c87]{display:flex;top:50px;position:fixed;height:40px;z-index:2}@media screen and (max-width:960px){.main-layout-container[_ngcontent-pfq-c87]   .sub-header[_ngcontent-pfq-c87]{display:none}}.main-layout-container[_ngcontent-pfq-c87]   .cd-auto-hide-header[_ngcontent-pfq-c87]{position:fixed;left:0;width:100%;transition:transform .4s ease}.main-layout-container[_ngcontent-pfq-c87]   .cd-auto-hide-header.is-hidden[_ngcontent-pfq-c87]{transform:translate3d(0,-101%,0)!important}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]{width:268px;top:50px;position:fixed;display:block;height:100%;will-change:transform}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]     .mat-drawer-inner-container{display:flex}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-left-sidenav, .mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-table-of-contents{transition:all .4s ease}@media screen and (min-width:960px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-left-sidenav, .mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-table-of-contents{padding-top:40px}}@media screen and (min-width:960px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.without-sub-navbar[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-left-sidenav, .mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.without-sub-navbar[_ngcontent-pfq-c87]     .mat-drawer-inner-container app-table-of-contents{transform:translate3d(0,-40px,0)!important}}@media screen and (max-width:960px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.scully-running[_ngcontent-pfq-c87]{transform:translate3d(-100%,0,0)!important}}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.left-sidenav[_ngcontent-pfq-c87]{border:0}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.right-sidenav[_ngcontent-pfq-c87]{background-color:inherit;border:none}@media screen and (max-width:1254px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.right-sidenav[_ngcontent-pfq-c87]{transform:translate3d(100%,0,0)!important}}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav.right-sidenav[_ngcontent-pfq-c87]   .external-toc[_ngcontent-pfq-c87]{margin:2rem 2rem 2rem 0}.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav-content[_ngcontent-pfq-c87]{top:0;width:100%;display:flex;align-content:center;justify-content:center;margin:40px 268px 0;padding:1.5rem}@media screen and (max-width:1254px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav-content[_ngcontent-pfq-c87]{margin-right:0!important}}@media screen and (max-width:960px){.mat-sidenav-container[_ngcontent-pfq-c87]   .mat-sidenav-content[_ngcontent-pfq-c87]{margin:0!important;padding:0!important}}.main-content-wrapper[_ngcontent-pfq-c87]{padding:0;width:100%;max-width:960px}.main-content-wrapper[_ngcontent-pfq-c87]   .main-content[_ngcontent-pfq-c87]{min-height:100vh}</style><style>.navbar-toolbar[_ngcontent-pfq-c58]{display:flex;width:100%;height:100%}.navbar-toolbar--transparent[_ngcontent-pfq-c58]{background-color:transparent!important;border:none!important}.navbar-toolbar[_ngcontent-pfq-c58]   .hamburger-button-container[_ngcontent-pfq-c58]{display:flex;align-items:center}@media screen and (min-width:960px){.navbar-toolbar[_ngcontent-pfq-c58]   .hamburger-button-container[_ngcontent-pfq-c58]{display:none}}.navbar-toolbar[_ngcontent-pfq-c58]   .branding[_ngcontent-pfq-c58]{display:flex;justify-content:center;align-items:center}.navbar-toolbar[_ngcontent-pfq-c58]   .branding[_ngcontent-pfq-c58]   a[_ngcontent-pfq-c58]{background:none;text-decoration:none;border:none;font-size:14px}.navbar-toolbar[_ngcontent-pfq-c58]   .spacer[_ngcontent-pfq-c58]{flex:1 0 auto}.navbar-toolbar[_ngcontent-pfq-c58]     .mat-button-wrapper{display:flex;justify-content:center}.navbar-toolbar[_ngcontent-pfq-c58]     .mat-button-wrapper i-feather{width:1.2rem}.navbar-toolbar[_ngcontent-pfq-c58]     .mat-button-wrapper i-feather svg{stroke-width:2px;padding-top:2px;vertical-align:super}</style><style>.sub-navbar[_ngcontent-pfq-c59]{height:inherit}.sub-navbar-link[_ngcontent-pfq-c59]{font-weight:600;letter-spacing:.05rem;text-transform:uppercase;font-size:11px;border:none}</style><style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}.cdk-high-contrast-active .mat-drawer-backdrop{opacity:.5}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}.cdk-high-contrast-active .mat-drawer,.cdk-high-contrast-active [dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}.cdk-high-contrast-active [dir=rtl] .mat-drawer,.cdk-high-contrast-active .mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer{transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}
+</style><style>[_nghost-pfq-c79]{display:flex;flex-direction:column;overflow-y:hidden}.mat-nav-list[_ngcontent-pfq-c79]{padding-top:0;overflow-y:auto}.mat-expansion-panel[_ngcontent-pfq-c79]{border-radius:0;border-bottom:1px solid #dadce0}.mat-expansion-panel-header-title[_ngcontent-pfq-c79]{font-weight:600;text-transform:uppercase;letter-spacing:.05rem;font-size:11px}.mat-expansion-panel-body[_ngcontent-pfq-c79]{padding-top:.5rem}.mat-list-item[_ngcontent-pfq-c79]{border-radius:0;height:auto!important;padding:.5rem 0!important;border:none}.mat-list-item[_ngcontent-pfq-c79]:first-of-type{margin-top:.5rem;border-top-left-radius:.3rem;border-top-right-radius:.3rem}.mat-list-item[_ngcontent-pfq-c79]:last-of-type{border-bottom-left-radius:.3rem;border-bottom-right-radius:.3rem}.mat-list-item[_ngcontent-pfq-c79]   span[_ngcontent-pfq-c79]{font-size:14px;white-space:normal;text-overflow:clip;line-height:22px}.mat-list-item[_ngcontent-pfq-c79]:hover{text-decoration:none}</style><style>[_nghost-pfq-c86]{display:flex;flex-direction:column;overflow-y:hidden}.toc[_ngcontent-pfq-c86]{overflow-y:auto;padding-left:12px;padding-right:12px;border-left-width:4px;border-left-style:solid}.toc__title[_ngcontent-pfq-c86]{margin-bottom:.5em}.toc__title[_ngcontent-pfq-c86]   span[_ngcontent-pfq-c86]{font-weight:600;font-size:15px}.toc__expand-button[_ngcontent-pfq-c86]{display:flex;justify-content:center;align-items:center}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]{padding:0;margin-bottom:.5rem;list-style-type:none}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]   li[_ngcontent-pfq-c86]{font-size:14px;line-height:20px}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]   li[_ngcontent-pfq-c86]:not(:first-child){margin-top:.5rem}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]   li.li--for-h3[_ngcontent-pfq-c86]{padding-left:1.5rem}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]   li[_ngcontent-pfq-c86]   a[_ngcontent-pfq-c86]{border:none}.toc__nav[_ngcontent-pfq-c86]   ul[_ngcontent-pfq-c86]   li[_ngcontent-pfq-c86]   a[_ngcontent-pfq-c86]:hover{text-decoration:none}</style><style>.cdk-high-contrast-active .mat-toolbar{outline:solid 1px}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%}.mat-toolbar-multiple-rows{min-height:64px}.mat-toolbar-row,.mat-toolbar-single-row{height:64px}@media(max-width: 599px){.mat-toolbar-multiple-rows{min-height:56px}.mat-toolbar-row,.mat-toolbar-single-row{height:56px}}
+</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled],.mat-flat-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.cdk-high-contrast-active .mat-button-focus-overlay{background-color:#fff}.cdk-high-contrast-black-on-white .mat-button-focus-overlay{background-color:#000}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}
+</style><style>[_nghost-pfq-c30]{display:inline-block;fill:none;height:24px;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;width:24px}</style><style>.mat-subheader{display:flex;box-sizing:border-box;padding:16px;align-items:center}.mat-list-base .mat-subheader{margin:0}.mat-list-base{padding-top:8px;display:block;-webkit-tap-highlight-color:transparent}.mat-list-base .mat-subheader{height:48px;line-height:16px}.mat-list-base .mat-subheader:first-child{margin-top:-8px}.mat-list-base .mat-list-item,.mat-list-base .mat-list-option{display:block;height:48px;-webkit-tap-highlight-color:transparent;width:100%;padding:0;position:relative}.mat-list-base .mat-list-item .mat-list-item-content,.mat-list-base .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base .mat-list-item .mat-list-item-content-reverse,.mat-list-base .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base .mat-list-item .mat-list-item-ripple,.mat-list-base .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar,.mat-list-base .mat-list-option.mat-list-item-with-avatar{height:56px}.mat-list-base .mat-list-item.mat-2-line,.mat-list-base .mat-list-option.mat-2-line{height:72px}.mat-list-base .mat-list-item.mat-3-line,.mat-list-base .mat-list-option.mat-3-line{height:88px}.mat-list-base .mat-list-item.mat-multi-line,.mat-list-base .mat-list-option.mat-multi-line{height:auto}.mat-list-base .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base .mat-list-item .mat-list-text,.mat-list-base .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base .mat-list-item .mat-list-text>*,.mat-list-base .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list-base .mat-list-item .mat-list-text:empty,.mat-list-base .mat-list-option .mat-list-text:empty{display:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base .mat-list-item .mat-list-avatar,.mat-list-base .mat-list-option .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%;object-fit:cover}.mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:72px;width:calc(100% - 72px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:72px}.mat-list-base .mat-list-item .mat-list-icon,.mat-list-base .mat-list-option .mat-list-icon{flex-shrink:0;width:24px;height:24px;font-size:24px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:64px;width:calc(100% - 64px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:64px}.mat-list-base .mat-list-item .mat-divider,.mat-list-base .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base .mat-list-item .mat-divider,[dir=rtl] .mat-list-base .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-list-base[dense]{padding-top:4px;display:block}.mat-list-base[dense] .mat-subheader{height:40px;line-height:8px}.mat-list-base[dense] .mat-subheader:first-child{margin-top:-4px}.mat-list-base[dense] .mat-list-item,.mat-list-base[dense] .mat-list-option{display:block;height:40px;-webkit-tap-highlight-color:transparent;width:100%;padding:0;position:relative}.mat-list-base[dense] .mat-list-item .mat-list-item-content,.mat-list-base[dense] .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base[dense] .mat-list-item .mat-list-item-content-reverse,.mat-list-base[dense] .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base[dense] .mat-list-item .mat-list-item-ripple,.mat-list-base[dense] .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar{height:48px}.mat-list-base[dense] .mat-list-item.mat-2-line,.mat-list-base[dense] .mat-list-option.mat-2-line{height:60px}.mat-list-base[dense] .mat-list-item.mat-3-line,.mat-list-base[dense] .mat-list-option.mat-3-line{height:76px}.mat-list-base[dense] .mat-list-item.mat-multi-line,.mat-list-base[dense] .mat-list-option.mat-multi-line{height:auto}.mat-list-base[dense] .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base[dense] .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base[dense] .mat-list-item .mat-list-text,.mat-list-base[dense] .mat-list-option .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-text>*,.mat-list-base[dense] .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list-base[dense] .mat-list-item .mat-list-text:empty,.mat-list-base[dense] .mat-list-option .mat-list-text:empty{display:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base[dense] .mat-list-item .mat-list-avatar,.mat-list-base[dense] .mat-list-option .mat-list-avatar{flex-shrink:0;width:36px;height:36px;border-radius:50%;object-fit:cover}.mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:68px;width:calc(100% - 68px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:68px}.mat-list-base[dense] .mat-list-item .mat-list-icon,.mat-list-base[dense] .mat-list-option .mat-list-icon{flex-shrink:0;width:20px;height:20px;font-size:20px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:60px;width:calc(100% - 60px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:60px}.mat-list-base[dense] .mat-list-item .mat-divider,.mat-list-base[dense] .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-divider,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base[dense] .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-nav-list a{text-decoration:none;color:inherit}.mat-nav-list .mat-list-item{cursor:pointer;outline:none}mat-action-list button{background:none;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:transparent;text-align:left}[dir=rtl] mat-action-list button{text-align:right}mat-action-list button::-moz-focus-inner{border:0}mat-action-list .mat-list-item{cursor:pointer;outline:inherit}.mat-list-option:not(.mat-list-item-disabled){cursor:pointer;outline:none}.mat-list-item-disabled{pointer-events:none}.cdk-high-contrast-active .mat-list-item-disabled{opacity:.5}.cdk-high-contrast-active :host .mat-list-item-disabled{opacity:.5}.cdk-high-contrast-active .mat-selection-list:focus{outline-style:dotted}.cdk-high-contrast-active .mat-list-option:hover,.cdk-high-contrast-active .mat-list-option:focus,.cdk-high-contrast-active .mat-nav-list .mat-list-item:hover,.cdk-high-contrast-active .mat-nav-list .mat-list-item:focus,.cdk-high-contrast-active mat-action-list .mat-list-item:hover,.cdk-high-contrast-active mat-action-list .mat-list-item:focus{outline:dotted 1px}.cdk-high-contrast-active .mat-list-single-selected-option::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}.cdk-high-contrast-active [dir=rtl] .mat-list-single-selected-option::after{right:auto;left:16px}@media(hover: none){.mat-list-option:not(.mat-list-item-disabled):hover,.mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover,.mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover{background:none}}
+</style><style>table+p{margin-top:1.5rem!important}  .main-blog .blog-content .markdown-content>:nth-child(5){padding-top:1rem!important;margin-top:0!important}a[_ngcontent-pfq-c113]{color:inherit!important}.btn[_ngcontent-pfq-c113]{margin-bottom:0;border-radius:0}.spacer[_ngcontent-pfq-c113]{flex:1 0 auto}h1[_ngcontent-pfq-c113]{margin-bottom:0!important}  .share__menu i-feather{width:16.333px;height:auto}  .share__menu i-feather svg{stroke-width:2px}.post__subheader[_ngcontent-pfq-c113]{display:flex;align-items:center;margin-bottom:1rem}.post__subheader[_ngcontent-pfq-c113]   .clock[_ngcontent-pfq-c113]{display:inline-flex}.post__subheader[_ngcontent-pfq-c113]   .clock[_ngcontent-pfq-c113]     svg{width:1rem;vertical-align:middle;stroke-width:2px}.post__subheader[_ngcontent-pfq-c113]   span[_ngcontent-pfq-c113]{display:flex;align-items:center}.post__subheader[_ngcontent-pfq-c113]     svg{stroke-width:1.5px;width:1.3rem}  .main-blog{padding:2rem;font-size:15px;overflow-x:hidden}  .main-blog .inner-toc{margin:0 2em 0 0}@media screen and (min-width:1254px){  .main-blog .inner-toc{display:none}}  .main-blog   .blog-content .markdown-content>:first-child,   .main-blog   .blog-content .markdown-content>:nth-child(2),   .main-blog   .blog-content .markdown-content>:nth-child(3){display:none}@media screen and (min-width:600px){  .main-blog   .blog-content .markdown-content pre{padding-top:0!important}}@media screen and (max-width:600px){  .main-blog   .blog-content .markdown-content .code-header{border-radius:4px 0 0 0}  .main-blog   .blog-content .markdown-content div[id^=code-]{border-radius:0 0 0 4px}  .main-blog   .blog-content .markdown-content div[id^=code-]>pre{border:0;padding-top:0;padding-left:2rem;padding-right:2rem}  .main-blog   .blog-content .markdown-content>.code-header,   .main-blog   .blog-content .markdown-content>.code-header>pre,   .main-blog   .blog-content .markdown-content>div[id^=code-],   .main-blog   .blog-content .markdown-content>div[id^=code-]>pre{border-radius:0}  .main-blog   .blog-content .markdown-content .code-header,   .main-blog   .blog-content .markdown-content div[id^=code-]{margin-left:-2rem;margin-right:-2rem}}  .main-blog   .blog-content div.toc{margin-bottom:0;margin-left:0}  .main-blog   .blog-content .token.class-name{text-decoration:none}  .main-blog   .blog-content h1{display:none}  .main-blog   .blog-content h2{padding-top:1rem}  .main-blog   .blog-content h1,   .main-blog   .blog-content h2,   .main-blog   .blog-content h3,   .main-blog   .blog-content h4,   .main-blog   .blog-content h5,   .main-blog   .blog-content h6{margin-right:-40px!important;padding-right:40px}  .main-blog   .blog-content h1 a:hover i-feather,   .main-blog   .blog-content h1:hover i-feather,   .main-blog   .blog-content h2 a:hover i-feather,   .main-blog   .blog-content h2:hover i-feather,   .main-blog   .blog-content h3 a:hover i-feather,   .main-blog   .blog-content h3:hover i-feather,   .main-blog   .blog-content h4 a:hover i-feather,   .main-blog   .blog-content h4:hover i-feather,   .main-blog   .blog-content h5 a:hover i-feather,   .main-blog   .blog-content h5:hover i-feather,   .main-blog   .blog-content h6 a:hover i-feather,   .main-blog   .blog-content h6:hover i-feather{visibility:visible}  .main-blog   .blog-content li:not(:first-child){margin-top:.5rem}  .main-blog   .blog-content>pre{border:0;border-radius:0 0 4px 4px;padding:.5rem 1.5em 2em}  .main-blog   .blog-content>pre>code{padding-right:1em}  .main-blog   .blog-content .code-header{display:flex;justify-content:flex-end;border-radius:4px 4px 0 0}  .main-blog   .blog-content .code-header .btn{border:0;margin:.5em .5em .7em .3em;padding:0;font-size:1.2em;width:auto}  .main-blog   .blog-content .code-header .btn i{color:#94969b}  .main-blog   .blog-content .code-header .btn i:hover{color:#fff}  .main-blog   .blog-content code{padding:2px 4px;font-family:Fira Code,Consolas,Liberation Mono,Menlo,Courier,monospace;border-radius:.3rem}  .main-blog   .blog-content pre{padding:.8rem;margin-top:0;margin-bottom:1rem;font:1rem Fira Code,Consolas,Liberation Mono,Menlo,Courier,monospace;word-wrap:normal;border-radius:0 0 .3rem .3rem}  .main-blog   .blog-content pre:before{content:attr(class);position:absolute;display:block;margin-bottom:6px;font-size:10px;font-weight:500;text-indent:-5rem;text-transform:uppercase;letter-spacing:2px;overflow:hidden;color:hsla(0,0%,91.4%,.7686274509803922);transform:translateY(-27px) translateX(0)}@media screen and (max-width:600px){  .main-blog   .blog-content pre:before{transform:translateY(-27px) translateX(-25px)}}  .main-blog   .blog-content pre>code{padding:0;margin:0;font-size:.9rem;word-break:normal;white-space:pre;background:transparent;border:0;border-radius:0 0 .3rem .3rem}  .main-blog   .blog-content .highlight{margin-bottom:1rem}  .main-blog   .blog-content .highlight pre{margin-bottom:0;word-break:normal}  .main-blog   .blog-content .highlight pre,   .main-blog   .blog-content pre{padding:.8rem;overflow:auto;font-size:.9rem;line-height:1.45;border-radius:0 0 .3rem .3rem;-webkit-overflow-scrolling:touch}  .main-blog   .blog-content pre code,   .main-blog   .blog-content pre tt{display:inline;max-width:none;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}  .main-blog   .blog-content pre code:after,   .main-blog   .blog-content pre code:before,   .main-blog   .blog-content pre tt:after,   .main-blog   .blog-content pre tt:before{content:normal}</style><style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:"";display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><style>.copy-button[_ngcontent-pfq-c107] {
+        padding: 0 0 0 0.9rem;
+        border: 0;
+        margin: 0;
+        font-size: 1.2em;
+        width: auto;
+        background-color: transparent;
+        vertical-align: middle;
+      }</style><style>
+      :host {
+        display: none;
+      }
+      scully-content {
+        display: none;
+      }
+    </style><style>.mat-expansion-panel{box-sizing:content-box;display:block;margin:0;border-radius:4px;overflow:hidden;transition:margin 225ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);position:relative}.mat-accordion .mat-expansion-panel:not(.mat-expanded),.mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing){border-radius:0}.mat-accordion .mat-expansion-panel:first-of-type{border-top-right-radius:4px;border-top-left-radius:4px}.mat-accordion .mat-expansion-panel:last-of-type{border-bottom-right-radius:4px;border-bottom-left-radius:4px}.cdk-high-contrast-active .mat-expansion-panel{outline:solid 1px}.mat-expansion-panel.ng-animate-disabled,.ng-animate-disabled .mat-expansion-panel,.mat-expansion-panel._mat-animation-noopable{transition:none}.mat-expansion-panel-content{display:flex;flex-direction:column;overflow:visible}.mat-expansion-panel-body{padding:0 24px 16px}.mat-expansion-panel-spacing{margin:16px 0}.mat-accordion>.mat-expansion-panel-spacing:first-child,.mat-accordion>*:first-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing{margin-top:0}.mat-accordion>.mat-expansion-panel-spacing:last-child,.mat-accordion>*:last-child:not(.mat-expansion-panel) .mat-expansion-panel-spacing{margin-bottom:0}.mat-action-row{border-top-style:solid;border-top-width:1px;display:flex;flex-direction:row;justify-content:flex-end;padding:16px 8px 16px 24px}.mat-action-row button.mat-button-base,.mat-action-row button.mat-mdc-button-base{margin-left:8px}[dir=rtl] .mat-action-row button.mat-button-base,[dir=rtl] .mat-action-row button.mat-mdc-button-base{margin-left:0;margin-right:8px}
+</style><style>.mat-expansion-panel-header{display:flex;flex-direction:row;align-items:center;padding:0 24px;border-radius:inherit;position:relative}.mat-expansion-panel-header:focus,.mat-expansion-panel-header:hover{outline:none}.mat-expansion-panel-header.mat-expanded:focus,.mat-expansion-panel-header.mat-expanded:hover{background:inherit}.mat-expansion-panel-header:not([aria-disabled=true]){cursor:pointer}.mat-expansion-panel-header.mat-expansion-toggle-indicator-before{flex-direction:row-reverse}.mat-expansion-panel-header.mat-expansion-toggle-indicator-before .mat-expansion-indicator{margin:0 16px 0 0}[dir=rtl] .mat-expansion-panel-header.mat-expansion-toggle-indicator-before .mat-expansion-indicator{margin:0 0 0 16px}.mat-content{display:flex;flex:1;flex-direction:row;overflow:hidden}.mat-expansion-panel-header-title,.mat-expansion-panel-header-description{display:flex;flex-grow:1;margin-right:16px}[dir=rtl] .mat-expansion-panel-header-title,[dir=rtl] .mat-expansion-panel-header-description{margin-right:0;margin-left:16px}.mat-expansion-panel-header-description{flex-grow:2}.mat-expansion-indicator::after{border-style:solid;border-width:0 2px 2px 0;content:"";display:inline-block;padding:3px;transform:rotate(45deg);vertical-align:middle}
+</style><script>window['ScullyIO']='generated';</script>
+<script type="text/javascript" id="scully-plugin-discount-flash-prevention">
+  function capt (ev) {
+	  if (document.documentElement.scrollTop === 0) {
+	  	document.documentElement.scrollTop = window['ScullyIO-scrollPosition'];
+	  }
+	  window['ScullyIO-scrollPosition'] = document.documentElement.scrollTop;
+	  document.addEventListener("AngularReady", detach);
+	};
+
+  function detach() {
+		window.removeEventListener('scroll', capt);
+		document.removeEventListener("AngularReady", detach);
+  };
+
+	window.addEventListener('scroll', capt);
+
+	window.addEventListener('AngularReady', scullyDiscountFlashPreventionContentScript);
+	function scullyDiscountFlashPreventionContentScript(){
+	  document.documentElement.scrollTop = window['ScullyIO-scrollPosition'];
+	  window.removeEventListener('scroll', capt);
+		document.body.classList.add('loaded');
+		const tempAppRoot = document.querySelector('app-root-scully');
+    tempAppRoot.parentNode.removeChild(tempAppRoot);
+    window.removeEventListener('AngularReady', scullyDiscountFlashPreventionContentScript);
+    window.dispatchEvent(new Event('FlashPreventionSwitchDone', {
+      bubbles: true,
+      cancelable: false
+    }))
+	}
+</script>
+<style type="text/css">
+	body:not(.loaded) app-root { display:none; }
+	body:not(.loaded) app-root-scully { display:inherit; }
+	body.loaded app-root { display:inherit; }
+  body.loaded app-root-scully { display:none; }
+</style>
+</head>
+  <body class="mat-typography mat-app-background" scully-version="1.1.0">
+    <app-root></app-root><app-root-scully _nghost-pfq-c89="" ng-version="9.0.7"><router-outlet _ngcontent-pfq-c89=""></router-outlet><app-main-layout _nghost-pfq-c87="" class="ng-star-inserted"><div _ngcontent-pfq-c87="" class="main-layout-container"><app-navbar _ngcontent-pfq-c87="" class="navbar mat-elevation-z1" _nghost-pfq-c58=""><mat-toolbar _ngcontent-pfq-c58="" class="mat-toolbar navbar-toolbar mat-toolbar-single-row"><div _ngcontent-pfq-c58="" class="hamburger-button-container ng-star-inserted"><button _ngcontent-pfq-c58="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i-feather _ngcontent-pfq-c58="" name="menu" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+</svg></i-feather></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button></div><!----><div _ngcontent-pfq-c58="" class="branding ng-star-inserted"><a _ngcontent-pfq-c58="" mat-flat-button="" routerlink="/" class="mat-focus-indicator mat-flat-button mat-button-base" tabindex="0" aria-disabled="false" href="/"><span class="mat-button-wrapper">Desnote Book</span><div matripple="" class="mat-ripple mat-button-ripple"></div><div class="mat-button-focus-overlay"></div></a></div><!----><span _ngcontent-pfq-c58="" class="spacer"></span><!----><button _ngcontent-pfq-c58="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i-feather _ngcontent-pfq-c58="" name="search" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg></i-feather></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><button _ngcontent-pfq-c58="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i-feather _ngcontent-pfq-c58="" name="maximize" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-maximize">
+    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+</svg></i-feather></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><button _ngcontent-pfq-c58="" mat-icon-button="" class="mat-focus-indicator mat-icon-button mat-button-base"><span class="mat-button-wrapper"><i-feather _ngcontent-pfq-c58="" name="moon" _nghost-pfq-c30="" class="ng-star-inserted"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-moon">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg></i-feather><!----><!----></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button></mat-toolbar></app-navbar><app-sub-header _ngcontent-pfq-c87="" class="sub-header cd-auto-hide-header" _nghost-pfq-c59=""><mat-toolbar _ngcontent-pfq-c59="" color="primary" class="mat-toolbar sub-navbar mat-elevation-z1 mat-primary mat-toolbar-single-row"><a _ngcontent-pfq-c59="" mat-button="" routerlinkactive="" disabled="true" class="mat-focus-indicator sub-navbar-link mat-button mat-button-base ng-star-inserted" style="pointer-events: none; cursor: default;" tabindex="-1" aria-disabled="true" href="/blog"><span class="mat-button-wrapper"> Tutoriels </span><div matripple="" class="mat-ripple mat-button-ripple"></div><div class="mat-button-focus-overlay"></div></a><a _ngcontent-pfq-c59="" mat-button="" routerlinkactive="" disabled="true" class="mat-focus-indicator sub-navbar-link mat-button mat-button-base ng-star-inserted" style="pointer-events: none; cursor: default;" tabindex="-1" aria-disabled="true" href="/cheet-sheets"><span class="mat-button-wrapper"> Cheet Sheets </span><div matripple="" class="mat-ripple mat-button-ripple"></div><div class="mat-button-focus-overlay"></div></a><a _ngcontent-pfq-c59="" mat-button="" routerlinkactive="" disabled="true" class="mat-focus-indicator sub-navbar-link mat-button mat-button-base ng-star-inserted" style="pointer-events: none; cursor: default;" tabindex="-1" aria-disabled="true" href="/courses"><span class="mat-button-wrapper"> Cours </span><div matripple="" class="mat-ripple mat-button-ripple"></div><div class="mat-button-focus-overlay"></div></a><!----></mat-toolbar></app-sub-header><mat-sidenav-container _ngcontent-pfq-c87="" class="mat-drawer-container mat-sidenav-container d-flex"><!----><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav _ngcontent-pfq-c87="" tabindex="-1" class="mat-drawer mat-sidenav left-sidenav mat-elevation-z2 ng-tns-c64-0 ng-trigger ng-trigger-transform scully-running mat-drawer-side mat-drawer-opened ng-star-inserted" style="transform: none; visibility: visible;"><div class="mat-drawer-inner-container ng-tns-c64-0"><app-left-sidenav _ngcontent-pfq-c87="" _nghost-pfq-c79="" class="ng-tns-c64-0"><mat-nav-list _ngcontent-pfq-c79="" role="navigation" class="mat-nav-list mat-list-base"><!----><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-3 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-4 ng-trigger ng-trigger-expansionHeight ng-tns-c76-3 ng-star-inserted" id="mat-expansion-panel-header-0" tabindex="0" aria-controls="cdk-accordion-child-0" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-4"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-4"> Javascript </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-4 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-3 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-0" aria-labelledby="mat-expansion-panel-header-0" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-3"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2021-04-20-memento-javascript" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Mémento des concepts du langage Javascript</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><!----><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-5 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-6 ng-trigger ng-trigger-expansionHeight ng-tns-c76-5 ng-star-inserted" id="mat-expansion-panel-header-1" tabindex="0" aria-controls="cdk-accordion-child-1" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-6"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-6"> CSS </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-6 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-5 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-1" aria-labelledby="mat-expansion-panel-header-1" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-5"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2020-07-05-comment-rendre-son-footer-responsive-en-css" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Comment rendre son footer responsive en CSS ?</span></div></div></a><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2021-03-04-memento-proprietes-css" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Mémento des propriétés CSS</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-7 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-8 ng-trigger ng-trigger-expansionHeight ng-tns-c76-7 ng-star-inserted" id="mat-expansion-panel-header-2" tabindex="0" aria-controls="cdk-accordion-child-2" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-8"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-8"> HTML </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-8 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-7 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-2" aria-labelledby="mat-expansion-panel-header-2" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-7"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2021-03-04-memento-balises-html" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Mémento des balises HTML</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-9 ng-star-inserted mat-expanded" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-10 ng-trigger ng-trigger-expansionHeight ng-tns-c76-9 ng-star-inserted mat-expanded" id="mat-expansion-panel-header-3" tabindex="0" aria-controls="cdk-accordion-child-3" aria-expanded="true" aria-disabled="false" style="height: 64px;"><span class="mat-content ng-tns-c77-10"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-10"> Spring </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-10 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(180deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-9 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-3" aria-labelledby="mat-expansion-panel-header-3" style="visibility: visible;"><div class="mat-expansion-panel-body ng-tns-c76-9"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted active-link" href="/blog/2020-07-05-dev-api-rest-avec-spring" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Développement d'une API REST avec Spring</span></div></div></a><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2020-10-23-introduction-spring" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Petite introduction à Spring</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-11 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-12 ng-trigger ng-trigger-expansionHeight ng-tns-c76-11 ng-star-inserted" id="mat-expansion-panel-header-4" tabindex="0" aria-controls="cdk-accordion-child-4" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-12"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-12"> Visual Studio Code </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-12 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-11 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-4" aria-labelledby="mat-expansion-panel-header-4" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-11"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2020-10-08-setup-vscode" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Setup de Visual Studio Code</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-13 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-14 ng-trigger ng-trigger-expansionHeight ng-tns-c76-13 ng-star-inserted" id="mat-expansion-panel-header-5" tabindex="0" aria-controls="cdk-accordion-child-5" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-14"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-14"> Méthodologies </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-14 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-13 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-5" aria-labelledby="mat-expansion-panel-header-5" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-13"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2021-08-31-memento-scrum" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Mémento du framework Agile Scrum</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><mat-expansion-panel _ngcontent-pfq-c79="" routerlinkactive="" class="mat-expansion-panel mat-elevation-z0 ng-tns-c76-15 ng-star-inserted" style=""><mat-expansion-panel-header _ngcontent-pfq-c79="" role="button" class="mat-expansion-panel-header mat-focus-indicator ng-tns-c77-16 ng-trigger ng-trigger-expansionHeight ng-tns-c76-15 ng-star-inserted" id="mat-expansion-panel-header-6" tabindex="0" aria-controls="cdk-accordion-child-6" aria-expanded="false" aria-disabled="false" style="height: 48px;"><span class="mat-content ng-tns-c77-16"><mat-panel-title _ngcontent-pfq-c79="" class="mat-expansion-panel-header-title ng-tns-c77-16"> Git </mat-panel-title></span><span class="mat-expansion-indicator ng-tns-c77-16 ng-trigger ng-trigger-indicatorRotate ng-star-inserted" style="transform: rotate(0deg);"></span><!----></mat-expansion-panel-header><div role="region" class="mat-expansion-panel-content ng-tns-c76-15 ng-trigger ng-trigger-bodyExpansion" id="cdk-accordion-child-6" aria-labelledby="mat-expansion-panel-header-6" style="height: 0px; visibility: hidden;"><div class="mat-expansion-panel-body ng-tns-c76-15"><a _ngcontent-pfq-c79="" mat-list-item="" matripple="" routerlinkactive="active-link" class="mat-list-item mat-focus-indicator mat-ripple ng-star-inserted" href="/blog/2021-10-22-structurer-ses-commits" style=""><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"><span _ngcontent-pfq-c79="" matline="" class="mat-line">Structurer ses commits</span></div></div></a><!----><!----></div></div></mat-expansion-panel><!----><!----><!----><!----></mat-nav-list></app-left-sidenav></div></mat-sidenav><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav _ngcontent-pfq-c87="" tabindex="-1" mode="side" position="end" opened="" class="mat-drawer mat-sidenav mat-elevation-z0 right-sidenav with-sub-navbar-visible ng-tns-c64-1 ng-trigger ng-trigger-transform mat-drawer-end mat-drawer-side mat-drawer-opened ng-star-inserted" style="transform: none; visibility: visible;"><div class="mat-drawer-inner-container ng-tns-c64-1"><app-table-of-contents _ngcontent-pfq-c87="" class="external-toc ng-tns-c64-1" _nghost-pfq-c86=""><div _ngcontent-pfq-c86="" class="toc ng-star-inserted" style=""><div _ngcontent-pfq-c86="" class="toc__title"><span _ngcontent-pfq-c86="">Sommaire</span></div><nav _ngcontent-pfq-c86="" class="toc__nav"><ul _ngcontent-pfq-c86=""><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#introduction"> Introduction </a></li><li _ngcontent-pfq-c86="" class="li--for-h3 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#technologies"> Technologies </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#cr%C3%A9ation-du-projet-sur-spring-initializr"> Création du projet sur Spring Initializr </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#import-sous-eclipse"> Import sous Eclipse </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#configuration-de-la-base-de-donn%C3%A9es"> Configuration de la base de données </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#coloration-syntaxique-en-java"> Coloration syntaxique en Java </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#coloration-syntaxique-en-html"> Coloration syntaxique en HTML </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#create-files-and-folders"> Create files and folders </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#switch-to-another-file"> Switch to another file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#rename-a-file"> Rename a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#delete-a-file"> Delete a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#export-a-file"> Export a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#open-a-file"> Open a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#save-a-file"> Save a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#synchronize-a-file"> Synchronize a file </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#manage-file-synchronization"> Manage file synchronization </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#publish-a-file"> Publish a File </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#update-a-publication"> Update a publication </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#manage-file-publication"> Manage file publication </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#smartypants"> SmartyPants </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#katex"> KaTeX </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#uml-diagrams"> UML diagrams </a></li><!----></ul></nav><!----></div><!----><!----></app-table-of-contents></div></mat-sidenav><div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div><mat-sidenav-content _ngcontent-pfq-c87="" class="mat-drawer-content mat-sidenav-content with-sub-navbar-visible p-4" style="margin-left: 268px; margin-right: 268px;"><div _ngcontent-pfq-c87="" role="main" addcodeheaders="" class="main-content-wrapper"><main _ngcontent-pfq-c87="" class="main-content"><router-outlet _ngcontent-pfq-c87=""></router-outlet><app-blog _nghost-pfq-c113="" class="ng-star-inserted"><div _ngcontent-pfq-c113="" class="main-blog">
+  <h1 _ngcontent-pfq-c113="">Développement d'une API REST avec Spring</h1>
+
+  <div _ngcontent-pfq-c113="" class="post__subheader">
+    <i-feather _ngcontent-pfq-c113="" name="clock" class="clock" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-clock">
+    <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg></i-feather>
+    <span _ngcontent-pfq-c113="">5 juil. 2020</span>
+    <span _ngcontent-pfq-c113="" class="ml-2 mr-2">·</span>
+    <span _ngcontent-pfq-c113="">
+      8 min. de lecture
+    </span>
+    <span _ngcontent-pfq-c113="" class="spacer"></span>
+    <button _ngcontent-pfq-c113="" aria-haspopup="true" mat-icon-button="" mattooltip="Partager le post" class="mat-focus-indicator mat-menu-trigger mat-icon-button mat-button-base" aria-describedby="cdk-describedby-message-0" cdk-describedby-host=""><span class="mat-button-wrapper">
+      <i-feather _ngcontent-pfq-c113="" name="share" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-share">
+    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line>
+</svg></i-feather>
+    </span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><!---->
+    <mat-menu _ngcontent-pfq-c113="" class=""><!----></mat-menu>
+  </div>
+
+  <div _ngcontent-pfq-c113="" class="inner-toc">
+    <app-table-of-contents _ngcontent-pfq-c113="" limit="5" _nghost-pfq-c86=""><div _ngcontent-pfq-c86="" class="toc ng-star-inserted"><div _ngcontent-pfq-c86="" class="toc__title"><span _ngcontent-pfq-c86="">Sommaire</span></div><nav _ngcontent-pfq-c86="" class="toc__nav"><ul _ngcontent-pfq-c86=""><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#introduction"> Introduction </a></li><li _ngcontent-pfq-c86="" class="li--for-h3 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#technologies"> Technologies </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#cr%C3%A9ation-du-projet-sur-spring-initializr"> Création du projet sur Spring Initializr </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#import-sous-eclipse"> Import sous Eclipse </a></li><li _ngcontent-pfq-c86="" class="li--for-h2 ng-star-inserted"><a _ngcontent-pfq-c86="" routerlink="." routerlinkactive="" href="/blog/2020-07-05-dev-api-rest-avec-spring#configuration-de-la-base-de-donn%C3%A9es"> Configuration de la base de données </a></li><!----></ul></nav><button _ngcontent-pfq-c86="" mat-icon-button="" aria-label="Expand button" class="mat-focus-indicator toc__expand-button mat-icon-button mat-button-base ng-star-inserted"><span class="mat-button-wrapper"><i-feather _ngcontent-pfq-c86="" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-more-horizontal">
+    <circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle>
+</svg></i-feather></span><div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div><div class="mat-button-focus-overlay"></div></button><!----></div><!----><!----></app-table-of-contents>
+  </div>
+
+  
+  <div _ngcontent-pfq-c113="" class="blog-content">
+    <markdown _ngcontent-pfq-c113="" emoji="" testdir="" addcodeheaders="" class="markdown-content"><hr>
+<p>title: 'Développement d''une API REST avec Spring'
+description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+published: true
+category: 'spring'
+createdAt: '2020-07-05'</p>
+<hr>
+
+      <h1 id="développement-dune-api-rest-avec-spring">
+        Développement d'une API REST avec Spring<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#développement-dune-api-rest-avec-spring" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h1>
+    
+      <h2 id="introduction">
+        Introduction<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#introduction" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>Ce mini-tutoriel permet d'explorer les possibilités de <strong>Github Pages</strong> et de la rédaction de tutoriels en <strong>Markdown</strong>.
+Il s'agit principalement de présenter comment réaliser rapidement les fondements d'une <strong>API REST</strong> à l'aide du framework <strong>Spring</strong>.</p>
+<blockquote>
+<p><strong>Attention :</strong> Ce tutoriel n'est actuellement pas complet.</p>
+</blockquote>
+
+      <h3 id="technologies">
+        Technologies<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#technologies" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h3>
+    <p>Voici une liste exhaustive des technologies qui seront employées :</p>
+<ul>
+<li>Spring REST</li>
+<li>Spring Boot / Spring Initializr</li>
+<li>Spring Data</li>
+<li>Maven</li>
+<li>Lombok</li>
+<li>MySQL</li>
+<li>JPA / Hibernate</li>
+</ul>
+
+      <h2 id="création-du-projet-sur-spring-initializr">
+        Création du projet sur Spring Initializr<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#création-du-projet-sur-spring-initializr" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>La première étape consite à créer les sources du projet Maven en remplissant le formulaire de <a href="https://start.spring.io">Spring Initializr</a>.</p>
+<p>Ce dernier devrait se présenter sous la forme suivante :</p>
+<p><img src="https://i.imgur.com/SBl70J1.png" alt="Aperçu de SPring Initializr"></p>
+
+      <h2 id="import-sous-eclipse">
+        Import sous Eclipse<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#import-sous-eclipse" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    
+      <h2 id="configuration-de-la-base-de-données">
+        Configuration de la base de données<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#configuration-de-la-base-de-données" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>La configuration de la base de données se réalise dans le fichier <code>src/main/resources/app.properties</code> :</p>
+
+    <div ng-version="9.0.7" class="code-header"><button mattooltip="Copier le code" class="btn" data-clipboard-target="#code-0" aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><i class="fas fa-copy"></i></button><!----></div><div id="code-0">
+      <pre class=" language-properties"><code class=" language-properties">spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.show_sql=true
+
+# Configuration pour MySQL 8 (L'url, le username et le password sont à changer).
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/&lt;nom-de-la-BDD&gt;?serverTimezone=Europe/Berlin
+spring.datasource.username=&lt;identifiant&gt;
+spring.datasource.password=&lt;mot-de-passe&gt;
+
+######### Configuration pour HSQLDB
+#spring.jpa.database-platform=org.hibernate.dialect.HSQLDialect
+#spring.datasource.driver-class-name=org.hsqldb.jdbcDriver
+#spring.datasource.url=jdbc:hsqldb:file:data/ADM;shutdown=true;hsqldb.write_delay=false
+#spring.datasource.username=sa
+#spring.datasource.password=</code></pre>
+
+    </div>
+    
+      <h2 id="coloration-syntaxique-en-java">
+        Coloration syntaxique en Java<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#coloration-syntaxique-en-java" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    
+    <div ng-version="9.0.7" class="code-header"><button mattooltip="Copier le code" class="btn" data-clipboard-target="#code-1" aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><i class="fas fa-copy"></i></button><!----></div><div id="code-1">
+      <pre class=" language-java"><code class=" language-java"><span class="token keyword">package</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>education</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Collection</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashSet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Set</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Entity</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">JoinColumn</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">JoinTable</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">ManyToMany</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">ManyToOne</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">OneToMany</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>persistence<span class="token punctuation">.</span></span><span class="token class-name">Table</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">AccessLevel</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">EqualsAndHashCode</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">Getter</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">lombok<span class="token punctuation">.</span></span><span class="token class-name">Setter</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>fasterxml<span class="token punctuation">.</span>jackson<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">JsonIgnore</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span></span><span class="token class-name">AbstractEntity</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>association<span class="token punctuation">.</span></span><span class="token class-name">Association</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>referentials<span class="token punctuation">.</span>domain<span class="token punctuation">.</span></span><span class="token class-name">Domain</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>referentials<span class="token punctuation">.</span>organism<span class="token punctuation">.</span></span><span class="token class-name">Organism</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>referentials<span class="token punctuation">.</span>teachingmodality<span class="token punctuation">.</span></span><span class="token class-name">TeachingModality</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>referentials<span class="token punctuation">.</span>teachingsite<span class="token punctuation">.</span></span><span class="token class-name">TeachingSite</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">adm<span class="token punctuation">.</span>entities<span class="token punctuation">.</span>referentials<span class="token punctuation">.</span>typeofdegree<span class="token punctuation">.</span></span><span class="token class-name">TypeOfDegree</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Entity</span>
+<span class="token annotation punctuation">@Table</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"FORMATION"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Getter</span> <span class="token annotation punctuation">@Setter</span>
+<span class="token annotation punctuation">@EqualsAndHashCode</span><span class="token punctuation">(</span>onlyExplicitlyIncluded <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span> callSuper <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Education</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractEntity</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Getter</span><span class="token punctuation">(</span><span class="token class-name">AccessLevel</span><span class="token punctuation">.</span>NONE<span class="token punctuation">)</span> <span class="token annotation punctuation">@Setter</span><span class="token punctuation">(</span><span class="token class-name">AccessLevel</span><span class="token punctuation">.</span>NONE<span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">long</span> serialVersionUID <span class="token operator">=</span> <span class="token number">1L</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ManyToOne</span>
+    <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_TYPE_DIPLOME"</span><span class="token punctuation">,</span> referencedColumnName <span class="token operator">=</span> <span class="token string">"CODE"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">TypeOfDegree</span> type<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ManyToMany</span>
+    <span class="token annotation punctuation">@JoinTable</span><span class="token punctuation">(</span>
+      name <span class="token operator">=</span> <span class="token string">"ASSOC_FOR_DOM"</span><span class="token punctuation">,</span>
+      joinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_FORMATION"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      inverseJoinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_DOMAINE"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Domain</span><span class="token punctuation">&gt;</span></span> domains<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ManyToMany</span>
+    <span class="token annotation punctuation">@JoinTable</span><span class="token punctuation">(</span>
+      name <span class="token operator">=</span> <span class="token string">"ASSOC_FOR_ORG"</span><span class="token punctuation">,</span>
+      joinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_FORMATION"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      inverseJoinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_ORGANISME"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Organism</span><span class="token punctuation">&gt;</span></span> organisms<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ManyToMany</span>
+    <span class="token annotation punctuation">@JoinTable</span><span class="token punctuation">(</span>
+      name <span class="token operator">=</span> <span class="token string">"ASSOC_FOR_MOD"</span><span class="token punctuation">,</span>
+      joinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_FORMATION"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      inverseJoinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_MODALITE"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TeachingModality</span><span class="token punctuation">&gt;</span></span> modalities<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@ManyToMany</span>
+    <span class="token annotation punctuation">@JoinTable</span><span class="token punctuation">(</span>
+      name <span class="token operator">=</span> <span class="token string">"ASSOC_FOR_SIT"</span><span class="token punctuation">,</span>
+      joinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_FORMATION"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      inverseJoinColumns <span class="token operator">=</span> <span class="token annotation punctuation">@JoinColumn</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"CODE_SITE"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Set</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TeachingSite</span><span class="token punctuation">&gt;</span></span> sites<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@JsonIgnore</span>
+    <span class="token annotation punctuation">@OneToMany</span><span class="token punctuation">(</span>mappedBy <span class="token operator">=</span> <span class="token string">"id.education"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Association</span><span class="token punctuation">&gt;</span></span> associations<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Education</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        domains <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Domain</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        organisms <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Organism</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        modalities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TeachingModality</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+    </div>
+    
+      <h2 id="coloration-syntaxique-en-html">
+        Coloration syntaxique en HTML<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#coloration-syntaxique-en-html" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    
+    <div ng-version="9.0.7" class="code-header"><button mattooltip="Copier le code" class="btn" data-clipboard-target="#code-2" aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><i class="fas fa-copy"></i></button><!----></div><div id="code-2">
+      <pre class=" language-html"><code class=" language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>The HTML5 Herald<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>The HTML5 Herald<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>author<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>SitePoint<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/styles.css?v=1.0<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>js/scripts.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+    </div>
+    <p>StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible <strong>offline!</strong></p>
+
+      <h2 id="create-files-and-folders">
+        Create files and folders<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#create-files-and-folders" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the <strong>New file</strong> button in the file explorer. You can also create folders by clicking the <strong>New folder</strong> button.</p>
+
+      <h2 id="switch-to-another-file">
+        Switch to another file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#switch-to-another-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.</p>
+
+      <h2 id="rename-a-file">
+        Rename a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#rename-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can rename the current file by clicking the file name in the navigation bar or by clicking the <strong>Rename</strong> button in the file explorer.</p>
+
+      <h2 id="delete-a-file">
+        Delete a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#delete-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can delete the current file by clicking the <strong>Remove</strong> button in the file explorer. The file will be moved into the <strong>Trash</strong> folder and automatically deleted after 7 days of inactivity.</p>
+
+      <h2 id="export-a-file">
+        Export a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#export-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can export the current file by clicking <strong>Export to disk</strong> in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.</p>
+
+      <h1 id="synchronization">
+        Synchronization<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#synchronization" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h1>
+    <p>Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your <strong>Google Drive</strong>, your <strong>Dropbox</strong> and your <strong>GitHub</strong> accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.</p>
+<p>There are two types of synchronization and they can complement each other:</p>
+<ul>
+<li><p>The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.</p>
+<blockquote>
+<p>To start syncing your workspace, just sign in with Google in the menu.</p>
+</blockquote>
+</li>
+<li><p>The file synchronization will keep one file of the workspace synced with one or multiple files in <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong>.</p>
+<blockquote>
+<p>Before starting to sync files, you must link an account in the <strong>Synchronize</strong> sub-menu.</p>
+</blockquote>
+</li>
+</ul>
+
+      <h2 id="open-a-file">
+        Open a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#open-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can open a file from <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Open from</strong>. Once opened in the workspace, any modification in the file will be automatically synced.</p>
+
+      <h2 id="save-a-file">
+        Save a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#save-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can save any file of the workspace to <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Save on</strong>. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.</p>
+
+      <h2 id="synchronize-a-file">
+        Synchronize a file<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#synchronize-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.</p>
+<p>If you just have modified your file and you want to force syncing, click the <strong>Synchronize now</strong> button in the navigation bar.</p>
+<blockquote>
+<p><strong>Note:</strong> The <strong>Synchronize now</strong> button is disabled if you have no file to synchronize.</p>
+</blockquote>
+
+      <h2 id="manage-file-synchronization">
+        Manage file synchronization<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#manage-file-synchronization" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking <strong>File synchronization</strong> in the <strong>Synchronize</strong> sub-menu. This allows you to list and remove synchronized locations that are linked to your file.</p>
+
+      <h1 id="publication">
+        Publication<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#publication" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h1>
+    <p>Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like <strong>Blogger</strong>, <strong>Dropbox</strong>, <strong>Gist</strong>, <strong>GitHub</strong>, <strong>Google Drive</strong>, <strong>WordPress</strong> and <strong>Zendesk</strong>. With <a href="http://handlebarsjs.com/">Handlebars templates</a>, you have full control over what you export.</p>
+<blockquote>
+<p>Before starting to publish, you must link an account in the <strong>Publish</strong> sub-menu.</p>
+</blockquote>
+
+      <h2 id="publish-a-file">
+        Publish a File<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#publish-a-file" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can publish your file by opening the <strong>Publish</strong> sub-menu and by clicking <strong>Publish to</strong>. For some locations, you can choose between the following formats:</p>
+<ul>
+<li>Markdown: publish the Markdown text on a website that can interpret it (<strong>GitHub</strong> for instance),</li>
+<li>HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).</li>
+</ul>
+
+      <h2 id="update-a-publication">
+        Update a publication<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#update-a-publication" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the <strong>Publish now</strong> button in the navigation bar.</p>
+<blockquote>
+<p><strong>Note:</strong> The <strong>Publish now</strong> button is disabled if your file has not been published yet.</p>
+</blockquote>
+
+      <h2 id="manage-file-publication">
+        Manage file publication<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#manage-file-publication" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>Since one file can be published to multiple locations, you can list and manage publish locations by clicking <strong>File publication</strong> in the <strong>Publish</strong> sub-menu. This allows you to list and remove publication locations that are linked to your file.</p>
+
+      <h1 id="markdown-extensions">
+        Markdown extensions<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#markdown-extensions" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h1>
+    <p>StackEdit extends the standard Markdown syntax by adding extra <strong>Markdown extensions</strong>, providing you with some nice features.</p>
+<blockquote>
+<p><strong>ProTip:</strong> You can disable any <strong>Markdown extension</strong> in the <strong>File properties</strong> dialog.</p>
+</blockquote>
+
+      <h2 id="smartypants">
+        SmartyPants<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#smartypants" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ASCII</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Single backticks</td>
+<td><code>'Isn't this fun?'</code></td>
+<td>'Isn't this fun?'</td>
+</tr>
+<tr>
+<td>Quotes</td>
+<td><code>"Isn't this fun?"</code></td>
+<td>"Isn't this fun?"</td>
+</tr>
+<tr>
+<td>Dashes</td>
+<td><code>-- is en-dash, --- is em-dash</code></td>
+<td>-- is en-dash, --- is em-dash</td>
+</tr>
+</tbody></table>
+
+      <h2 id="katex">
+        KaTeX<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#katex" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can render LaTeX mathematical expressions using <a href="https://khan.github.io/KaTeX/">KaTeX</a>:</p>
+<p>The <em>Gamma function</em> satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral</p>
+<p>$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt,.
+$$</p>
+<blockquote>
+<p>You can find more information about <strong>LaTeX</strong> mathematical expressions <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">here</a>.</p>
+</blockquote>
+
+      <h2 id="uml-diagrams">
+        UML diagrams<span class="btn-wrapper" _nghost-pfq-c107="" ng-version="9.0.7"><button _ngcontent-pfq-c107="" mattooltip="Copier le lien vers cette section" class="btn copy-button" data-clipboard-text="http://localhost:1864/blog/2020-07-05-dev-api-rest-avec-spring#uml-diagrams" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><i-feather _ngcontent-pfq-c107="" name="link-2" class="header-link" _nghost-pfq-c30=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-link-2">
+    <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line>
+</svg></i-feather></button><!----></span>
+      </h2>
+    <p>You can render UML diagrams using <a href="https://mermaidjs.github.io/">Mermaid</a>. For example, this will produce a sequence diagram:</p>
+
+    <div ng-version="9.0.7" class="code-header"><button mattooltip="Copier le code" class="btn" data-clipboard-target="#code-3" aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><i class="fas fa-copy"></i></button><!----></div><div id="code-3">
+      <pre class=" language-mermaid"><code class=" language-mermaid">sequenceDiagram
+Alice -&gt;&gt; Bob: Hello Bob, how are you?
+Bob--&gt;&gt;John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long&lt;br/&gt;long time, so long&lt;br/&gt;that the text does&lt;br/&gt;not fit on a row.
+
+Bob--&gt;Alice: Checking with John...
+Alice-&gt;John: Yes... John, how are you?</code></pre>
+
+    </div>
+    <p>And this will produce a flow chart:</p>
+
+    <div ng-version="9.0.7" class="code-header"><button mattooltip="Copier le code" class="btn" data-clipboard-target="#code-4" aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><i class="fas fa-copy"></i></button><!----></div><div id="code-4">
+      <pre class=" language-mermaid"><code class=" language-mermaid">graph LR
+A[Square Rect] -- Link text --&gt; B((Circle))
+A --&gt; C(Round Rect)
+B --&gt; D{Rhombus}
+C --&gt; D</code></pre>
+
+    </div>
+    </markdown>
+    <div _ngcontent-pfq-c113="" style="display: none;">
+      <!--scullyContent-begin--><h1 id="développement-dune-api-rest-avec-spring" _ngcontent-pfq-c113="">Développement d'une API REST avec Spring</h1>
+<h2 id="introduction" _ngcontent-pfq-c113="">Introduction</h2>
+<p _ngcontent-pfq-c113="">Ce mini-tutoriel permet d'explorer les possibilités de <strong _ngcontent-pfq-c113="">Github Pages</strong> et de la rédaction de tutoriels en <strong _ngcontent-pfq-c113="">Markdown</strong>.
+Il s'agit principalement de présenter comment réaliser rapidement les fondements d'une <strong _ngcontent-pfq-c113="">API REST</strong> à l'aide du framework <strong _ngcontent-pfq-c113="">Spring</strong>.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113=""><strong _ngcontent-pfq-c113="">Attention :</strong> Ce tutoriel n'est actuellement pas complet.</p>
+</blockquote>
+<h3 id="technologies" _ngcontent-pfq-c113="">Technologies</h3>
+<p _ngcontent-pfq-c113="">Voici une liste exhaustive des technologies qui seront employées :</p>
+<ul _ngcontent-pfq-c113="">
+<li _ngcontent-pfq-c113="">Spring REST</li>
+<li _ngcontent-pfq-c113="">Spring Boot / Spring Initializr</li>
+<li _ngcontent-pfq-c113="">Spring Data</li>
+<li _ngcontent-pfq-c113="">Maven</li>
+<li _ngcontent-pfq-c113="">Lombok</li>
+<li _ngcontent-pfq-c113="">MySQL</li>
+<li _ngcontent-pfq-c113="">JPA / Hibernate</li>
+</ul>
+<h2 id="création-du-projet-sur-spring-initializr" _ngcontent-pfq-c113="">Création du projet sur Spring Initializr</h2>
+<p _ngcontent-pfq-c113="">La première étape consite à créer les sources du projet Maven en remplissant le formulaire de <a href="https://start.spring.io" _ngcontent-pfq-c113="">Spring Initializr</a>.</p>
+<p _ngcontent-pfq-c113="">Ce dernier devrait se présenter sous la forme suivante :</p>
+<p _ngcontent-pfq-c113=""><img src="https://i.imgur.com/SBl70J1.png" alt="Aperçu de SPring Initializr" _ngcontent-pfq-c113=""></p>
+<h2 id="import-sous-eclipse" _ngcontent-pfq-c113="">Import sous Eclipse</h2>
+<h2 id="configuration-de-la-base-de-données" _ngcontent-pfq-c113="">Configuration de la base de données</h2>
+<p _ngcontent-pfq-c113="">La configuration de la base de données se réalise dans le fichier <code _ngcontent-pfq-c113="">src/main/resources/app.properties</code> :</p>
+<pre class="language-properties" _ngcontent-pfq-c113=""><code class="language-properties" _ngcontent-pfq-c113=""><span class="token attr-name" _ngcontent-pfq-c113="">spring.jpa.hibernate.ddl-auto</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">update</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.jpa.hibernate.show_sql</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">true</span>
+
+<span class="token comment" _ngcontent-pfq-c113=""># Configuration pour MySQL 8 (L'url, le username et le password sont à changer).</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.jpa.database-platform</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">org.hibernate.dialect.MySQL8Dialect</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.datasource.driver-class-name</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">com.mysql.cj.jdbc.Driver</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.datasource.url</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">jdbc:mysql://localhost:3306/&lt;nom-de-la-BDD&gt;?serverTimezone=Europe/Berlin</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.datasource.username</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">&lt;identifiant&gt;</span>
+<span class="token attr-name" _ngcontent-pfq-c113="">spring.datasource.password</span><span class="token punctuation" _ngcontent-pfq-c113="">=</span><span class="token attr-value" _ngcontent-pfq-c113="">&lt;mot-de-passe&gt;</span>
+
+<span class="token comment" _ngcontent-pfq-c113="">######### Configuration pour HSQLDB</span>
+<span class="token comment" _ngcontent-pfq-c113="">#spring.jpa.database-platform=org.hibernate.dialect.HSQLDialect</span>
+<span class="token comment" _ngcontent-pfq-c113="">#spring.datasource.driver-class-name=org.hsqldb.jdbcDriver</span>
+<span class="token comment" _ngcontent-pfq-c113="">#spring.datasource.url=jdbc:hsqldb:file:data/ADM;shutdown=true;hsqldb.write_delay=false</span>
+<span class="token comment" _ngcontent-pfq-c113="">#spring.datasource.username=sa</span>
+<span class="token comment" _ngcontent-pfq-c113="">#spring.datasource.password=</span></code></pre><h2 id="coloration-syntaxique-en-java" _ngcontent-pfq-c113="">Coloration syntaxique en Java</h2>
+<pre class="language-java" _ngcontent-pfq-c113=""><code class="language-java" _ngcontent-pfq-c113=""><span class="token keyword" _ngcontent-pfq-c113="">package</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>education</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">java<span class="token punctuation" _ngcontent-pfq-c113="">.</span>util<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Collection</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">java<span class="token punctuation" _ngcontent-pfq-c113="">.</span>util<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">HashSet</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">java<span class="token punctuation" _ngcontent-pfq-c113="">.</span>util<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Set</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Entity</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">JoinTable</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">ManyToMany</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">ManyToOne</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">OneToMany</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">javax<span class="token punctuation" _ngcontent-pfq-c113="">.</span>persistence<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Table</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">lombok<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">AccessLevel</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">lombok<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">EqualsAndHashCode</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">lombok<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Getter</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">lombok<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Setter</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">com<span class="token punctuation" _ngcontent-pfq-c113="">.</span>fasterxml<span class="token punctuation" _ngcontent-pfq-c113="">.</span>jackson<span class="token punctuation" _ngcontent-pfq-c113="">.</span>annotation<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">JsonIgnore</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">AbstractEntity</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>association<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Association</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>referentials<span class="token punctuation" _ngcontent-pfq-c113="">.</span>domain<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Domain</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>referentials<span class="token punctuation" _ngcontent-pfq-c113="">.</span>organism<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">Organism</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>referentials<span class="token punctuation" _ngcontent-pfq-c113="">.</span>teachingmodality<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">TeachingModality</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>referentials<span class="token punctuation" _ngcontent-pfq-c113="">.</span>teachingsite<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">TeachingSite</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+<span class="token keyword" _ngcontent-pfq-c113="">import</span> <span class="token namespace" _ngcontent-pfq-c113="">adm<span class="token punctuation" _ngcontent-pfq-c113="">.</span>entities<span class="token punctuation" _ngcontent-pfq-c113="">.</span>referentials<span class="token punctuation" _ngcontent-pfq-c113="">.</span>typeofdegree<span class="token punctuation" _ngcontent-pfq-c113="">.</span></span><span class="token class-name" _ngcontent-pfq-c113="">TypeOfDegree</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+<span class="token annotation punctuation" _ngcontent-pfq-c113="">@Entity</span>
+<span class="token annotation punctuation" _ngcontent-pfq-c113="">@Table</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"FORMATION"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+<span class="token annotation punctuation" _ngcontent-pfq-c113="">@Getter</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@Setter</span>
+<span class="token annotation punctuation" _ngcontent-pfq-c113="">@EqualsAndHashCode</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>onlyExplicitlyIncluded <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token boolean" _ngcontent-pfq-c113="">true</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span> callSuper <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token boolean" _ngcontent-pfq-c113="">true</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+<span class="token keyword" _ngcontent-pfq-c113="">public</span> <span class="token keyword" _ngcontent-pfq-c113="">class</span> <span class="token class-name" _ngcontent-pfq-c113="">Education</span> <span class="token keyword" _ngcontent-pfq-c113="">extends</span> <span class="token class-name" _ngcontent-pfq-c113="">AbstractEntity</span> <span class="token punctuation" _ngcontent-pfq-c113="">{</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@Getter</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token class-name" _ngcontent-pfq-c113="">AccessLevel</span><span class="token punctuation" _ngcontent-pfq-c113="">.</span>NONE<span class="token punctuation" _ngcontent-pfq-c113="">)</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@Setter</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token class-name" _ngcontent-pfq-c113="">AccessLevel</span><span class="token punctuation" _ngcontent-pfq-c113="">.</span>NONE<span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token keyword" _ngcontent-pfq-c113="">static</span> <span class="token keyword" _ngcontent-pfq-c113="">final</span> <span class="token keyword" _ngcontent-pfq-c113="">long</span> serialVersionUID <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token number" _ngcontent-pfq-c113="">1L</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@ManyToOne</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_TYPE_DIPLOME"</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span> referencedColumnName <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">TypeOfDegree</span> type<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@ManyToMany</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinTable</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>
+      name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"ASSOC_FOR_DOM"</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      joinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_FORMATION"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      inverseJoinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_DOMAINE"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">Set</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">Domain</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span> domains<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@ManyToMany</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinTable</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>
+      name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"ASSOC_FOR_ORG"</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      joinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_FORMATION"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      inverseJoinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_ORGANISME"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">Set</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">Organism</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span> organisms<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@ManyToMany</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinTable</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>
+      name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"ASSOC_FOR_MOD"</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      joinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_FORMATION"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      inverseJoinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_MODALITE"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">Set</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">TeachingModality</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span> modalities<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@ManyToMany</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinTable</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>
+      name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"ASSOC_FOR_SIT"</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      joinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_FORMATION"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">,</span>
+      inverseJoinColumns <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JoinColumn</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>name <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"CODE_SITE"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">Set</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">TeachingSite</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span> sites<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@JsonIgnore</span>
+    <span class="token annotation punctuation" _ngcontent-pfq-c113="">@OneToMany</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span>mappedBy <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token string" _ngcontent-pfq-c113="">"id.education"</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span>
+    <span class="token keyword" _ngcontent-pfq-c113="">private</span> <span class="token class-name" _ngcontent-pfq-c113="">Collection</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">Association</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span> associations<span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+
+    <span class="token keyword" _ngcontent-pfq-c113="">public</span> <span class="token class-name" _ngcontent-pfq-c113="">Education</span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span> <span class="token punctuation" _ngcontent-pfq-c113="">{</span>
+        domains <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token keyword" _ngcontent-pfq-c113="">new</span> <span class="token class-name" _ngcontent-pfq-c113="">HashSet</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">Domain</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+        organisms <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token keyword" _ngcontent-pfq-c113="">new</span> <span class="token class-name" _ngcontent-pfq-c113="">HashSet</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">Organism</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+        modalities <span class="token operator" _ngcontent-pfq-c113="">=</span> <span class="token keyword" _ngcontent-pfq-c113="">new</span> <span class="token class-name" _ngcontent-pfq-c113="">HashSet</span><span class="token generics" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span><span class="token class-name" _ngcontent-pfq-c113="">TeachingModality</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span><span class="token punctuation" _ngcontent-pfq-c113="">(</span><span class="token punctuation" _ngcontent-pfq-c113="">)</span><span class="token punctuation" _ngcontent-pfq-c113="">;</span>
+    <span class="token punctuation" _ngcontent-pfq-c113="">}</span>
+<span class="token punctuation" _ngcontent-pfq-c113="">}</span></code></pre><h2 id="coloration-syntaxique-en-html" _ngcontent-pfq-c113="">Coloration syntaxique en HTML</h2>
+<pre class="language-html" _ngcontent-pfq-c113=""><code class="language-html" _ngcontent-pfq-c113=""><span class="token doctype" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;!</span><span class="token doctype-tag" _ngcontent-pfq-c113="">DOCTYPE</span> <span class="token name" _ngcontent-pfq-c113="">html</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+
+<span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>html</span> <span class="token attr-name" _ngcontent-pfq-c113="">lang</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>en<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+  <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>head</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>meta</span> <span class="token attr-name" _ngcontent-pfq-c113="">charset</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>utf-8<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token punctuation" _ngcontent-pfq-c113="">/&gt;</span></span>
+
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>title</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>The HTML5 Herald<span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;/</span>title</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>meta</span> <span class="token attr-name" _ngcontent-pfq-c113="">name</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>description<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token attr-name" _ngcontent-pfq-c113="">content</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>The HTML5 Herald<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token punctuation" _ngcontent-pfq-c113="">/&gt;</span></span>
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>meta</span> <span class="token attr-name" _ngcontent-pfq-c113="">name</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>author<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token attr-name" _ngcontent-pfq-c113="">content</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>SitePoint<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token punctuation" _ngcontent-pfq-c113="">/&gt;</span></span>
+
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>link</span> <span class="token attr-name" _ngcontent-pfq-c113="">rel</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>stylesheet<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token attr-name" _ngcontent-pfq-c113="">href</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>css/styles.css?v=1.0<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span> <span class="token punctuation" _ngcontent-pfq-c113="">/&gt;</span></span>
+  <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;/</span>head</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+
+  <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>body</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+    <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;</span>script</span> <span class="token attr-name" _ngcontent-pfq-c113="">src</span><span class="token attr-value" _ngcontent-pfq-c113=""><span class="token punctuation attr-equals" _ngcontent-pfq-c113="">=</span><span class="token punctuation" _ngcontent-pfq-c113="">"</span>js/scripts.js<span class="token punctuation" _ngcontent-pfq-c113="">"</span></span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span><span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;/</span>script</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+  <span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;/</span>body</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span>
+<span class="token tag" _ngcontent-pfq-c113=""><span class="token tag" _ngcontent-pfq-c113=""><span class="token punctuation" _ngcontent-pfq-c113="">&lt;/</span>html</span><span class="token punctuation" _ngcontent-pfq-c113="">&gt;</span></span></code></pre><p _ngcontent-pfq-c113="">StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible <strong _ngcontent-pfq-c113="">offline!</strong></p>
+<h2 id="create-files-and-folders" _ngcontent-pfq-c113="">Create files and folders</h2>
+<p _ngcontent-pfq-c113="">The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the <strong _ngcontent-pfq-c113="">New file</strong> button in the file explorer. You can also create folders by clicking the <strong _ngcontent-pfq-c113="">New folder</strong> button.</p>
+<h2 id="switch-to-another-file" _ngcontent-pfq-c113="">Switch to another file</h2>
+<p _ngcontent-pfq-c113="">All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.</p>
+<h2 id="rename-a-file" _ngcontent-pfq-c113="">Rename a file</h2>
+<p _ngcontent-pfq-c113="">You can rename the current file by clicking the file name in the navigation bar or by clicking the <strong _ngcontent-pfq-c113="">Rename</strong> button in the file explorer.</p>
+<h2 id="delete-a-file" _ngcontent-pfq-c113="">Delete a file</h2>
+<p _ngcontent-pfq-c113="">You can delete the current file by clicking the <strong _ngcontent-pfq-c113="">Remove</strong> button in the file explorer. The file will be moved into the <strong _ngcontent-pfq-c113="">Trash</strong> folder and automatically deleted after 7 days of inactivity.</p>
+<h2 id="export-a-file" _ngcontent-pfq-c113="">Export a file</h2>
+<p _ngcontent-pfq-c113="">You can export the current file by clicking <strong _ngcontent-pfq-c113="">Export to disk</strong> in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.</p>
+<h1 id="synchronization" _ngcontent-pfq-c113="">Synchronization</h1>
+<p _ngcontent-pfq-c113="">Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your <strong _ngcontent-pfq-c113="">Google Drive</strong>, your <strong _ngcontent-pfq-c113="">Dropbox</strong> and your <strong _ngcontent-pfq-c113="">GitHub</strong> accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.</p>
+<p _ngcontent-pfq-c113="">There are two types of synchronization and they can complement each other:</p>
+<ul _ngcontent-pfq-c113="">
+<li _ngcontent-pfq-c113=""><p _ngcontent-pfq-c113="">The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113="">To start syncing your workspace, just sign in with Google in the menu.</p>
+</blockquote>
+</li>
+<li _ngcontent-pfq-c113=""><p _ngcontent-pfq-c113="">The file synchronization will keep one file of the workspace synced with one or multiple files in <strong _ngcontent-pfq-c113="">Google Drive</strong>, <strong _ngcontent-pfq-c113="">Dropbox</strong> or <strong _ngcontent-pfq-c113="">GitHub</strong>.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113="">Before starting to sync files, you must link an account in the <strong _ngcontent-pfq-c113="">Synchronize</strong> sub-menu.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="open-a-file" _ngcontent-pfq-c113="">Open a file</h2>
+<p _ngcontent-pfq-c113="">You can open a file from <strong _ngcontent-pfq-c113="">Google Drive</strong>, <strong _ngcontent-pfq-c113="">Dropbox</strong> or <strong _ngcontent-pfq-c113="">GitHub</strong> by opening the <strong _ngcontent-pfq-c113="">Synchronize</strong> sub-menu and clicking <strong _ngcontent-pfq-c113="">Open from</strong>. Once opened in the workspace, any modification in the file will be automatically synced.</p>
+<h2 id="save-a-file" _ngcontent-pfq-c113="">Save a file</h2>
+<p _ngcontent-pfq-c113="">You can save any file of the workspace to <strong _ngcontent-pfq-c113="">Google Drive</strong>, <strong _ngcontent-pfq-c113="">Dropbox</strong> or <strong _ngcontent-pfq-c113="">GitHub</strong> by opening the <strong _ngcontent-pfq-c113="">Synchronize</strong> sub-menu and clicking <strong _ngcontent-pfq-c113="">Save on</strong>. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.</p>
+<h2 id="synchronize-a-file" _ngcontent-pfq-c113="">Synchronize a file</h2>
+<p _ngcontent-pfq-c113="">Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.</p>
+<p _ngcontent-pfq-c113="">If you just have modified your file and you want to force syncing, click the <strong _ngcontent-pfq-c113="">Synchronize now</strong> button in the navigation bar.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113=""><strong _ngcontent-pfq-c113="">Note:</strong> The <strong _ngcontent-pfq-c113="">Synchronize now</strong> button is disabled if you have no file to synchronize.</p>
+</blockquote>
+<h2 id="manage-file-synchronization" _ngcontent-pfq-c113="">Manage file synchronization</h2>
+<p _ngcontent-pfq-c113="">Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking <strong _ngcontent-pfq-c113="">File synchronization</strong> in the <strong _ngcontent-pfq-c113="">Synchronize</strong> sub-menu. This allows you to list and remove synchronized locations that are linked to your file.</p>
+<h1 id="publication" _ngcontent-pfq-c113="">Publication</h1>
+<p _ngcontent-pfq-c113="">Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like <strong _ngcontent-pfq-c113="">Blogger</strong>, <strong _ngcontent-pfq-c113="">Dropbox</strong>, <strong _ngcontent-pfq-c113="">Gist</strong>, <strong _ngcontent-pfq-c113="">GitHub</strong>, <strong _ngcontent-pfq-c113="">Google Drive</strong>, <strong _ngcontent-pfq-c113="">WordPress</strong> and <strong _ngcontent-pfq-c113="">Zendesk</strong>. With <a href="http://handlebarsjs.com/" _ngcontent-pfq-c113="">Handlebars templates</a>, you have full control over what you export.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113="">Before starting to publish, you must link an account in the <strong _ngcontent-pfq-c113="">Publish</strong> sub-menu.</p>
+</blockquote>
+<h2 id="publish-a-file" _ngcontent-pfq-c113="">Publish a File</h2>
+<p _ngcontent-pfq-c113="">You can publish your file by opening the <strong _ngcontent-pfq-c113="">Publish</strong> sub-menu and by clicking <strong _ngcontent-pfq-c113="">Publish to</strong>. For some locations, you can choose between the following formats:</p>
+<ul _ngcontent-pfq-c113="">
+<li _ngcontent-pfq-c113="">Markdown: publish the Markdown text on a website that can interpret it (<strong _ngcontent-pfq-c113="">GitHub</strong> for instance),</li>
+<li _ngcontent-pfq-c113="">HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).</li>
+</ul>
+<h2 id="update-a-publication" _ngcontent-pfq-c113="">Update a publication</h2>
+<p _ngcontent-pfq-c113="">After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the <strong _ngcontent-pfq-c113="">Publish now</strong> button in the navigation bar.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113=""><strong _ngcontent-pfq-c113="">Note:</strong> The <strong _ngcontent-pfq-c113="">Publish now</strong> button is disabled if your file has not been published yet.</p>
+</blockquote>
+<h2 id="manage-file-publication" _ngcontent-pfq-c113="">Manage file publication</h2>
+<p _ngcontent-pfq-c113="">Since one file can be published to multiple locations, you can list and manage publish locations by clicking <strong _ngcontent-pfq-c113="">File publication</strong> in the <strong _ngcontent-pfq-c113="">Publish</strong> sub-menu. This allows you to list and remove publication locations that are linked to your file.</p>
+<h1 id="markdown-extensions" _ngcontent-pfq-c113="">Markdown extensions</h1>
+<p _ngcontent-pfq-c113="">StackEdit extends the standard Markdown syntax by adding extra <strong _ngcontent-pfq-c113="">Markdown extensions</strong>, providing you with some nice features.</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113=""><strong _ngcontent-pfq-c113="">ProTip:</strong> You can disable any <strong _ngcontent-pfq-c113="">Markdown extension</strong> in the <strong _ngcontent-pfq-c113="">File properties</strong> dialog.</p>
+</blockquote>
+<h2 id="smartypants" _ngcontent-pfq-c113="">SmartyPants</h2>
+<p _ngcontent-pfq-c113="">SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:</p>
+<table _ngcontent-pfq-c113="">
+<thead _ngcontent-pfq-c113="">
+<tr _ngcontent-pfq-c113="">
+<th _ngcontent-pfq-c113=""></th>
+<th _ngcontent-pfq-c113="">ASCII</th>
+<th _ngcontent-pfq-c113="">HTML</th>
+</tr>
+</thead>
+<tbody _ngcontent-pfq-c113=""><tr _ngcontent-pfq-c113="">
+<td _ngcontent-pfq-c113="">Single backticks</td>
+<td _ngcontent-pfq-c113=""><code _ngcontent-pfq-c113="">'Isn't this fun?'</code></td>
+<td _ngcontent-pfq-c113="">'Isn't this fun?'</td>
+</tr>
+<tr _ngcontent-pfq-c113="">
+<td _ngcontent-pfq-c113="">Quotes</td>
+<td _ngcontent-pfq-c113=""><code _ngcontent-pfq-c113="">"Isn't this fun?"</code></td>
+<td _ngcontent-pfq-c113="">"Isn't this fun?"</td>
+</tr>
+<tr _ngcontent-pfq-c113="">
+<td _ngcontent-pfq-c113="">Dashes</td>
+<td _ngcontent-pfq-c113=""><code _ngcontent-pfq-c113="">-- is en-dash, --- is em-dash</code></td>
+<td _ngcontent-pfq-c113="">-- is en-dash, --- is em-dash</td>
+</tr>
+</tbody></table>
+<h2 id="katex" _ngcontent-pfq-c113="">KaTeX</h2>
+<p _ngcontent-pfq-c113="">You can render LaTeX mathematical expressions using <a href="https://khan.github.io/KaTeX/" _ngcontent-pfq-c113="">KaTeX</a>:</p>
+<p _ngcontent-pfq-c113="">The <em _ngcontent-pfq-c113="">Gamma function</em> satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral</p>
+<p _ngcontent-pfq-c113="">$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt,.
+$$</p>
+<blockquote _ngcontent-pfq-c113="">
+<p _ngcontent-pfq-c113="">You can find more information about <strong _ngcontent-pfq-c113="">LaTeX</strong> mathematical expressions <a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" _ngcontent-pfq-c113="">here</a>.</p>
+</blockquote>
+<h2 id="uml-diagrams" _ngcontent-pfq-c113="">UML diagrams</h2>
+<p _ngcontent-pfq-c113="">You can render UML diagrams using <a href="https://mermaidjs.github.io/" _ngcontent-pfq-c113="">Mermaid</a>. For example, this will produce a sequence diagram:</p>
+<pre class="language-mermaid" _ngcontent-pfq-c113=""><code class="language-mermaid" _ngcontent-pfq-c113="">sequenceDiagram
+Alice -&gt;&gt; Bob: Hello Bob, how are you?
+Bob--&gt;&gt;John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br _ngcontent-pfq-c113="">long time, so long<br _ngcontent-pfq-c113="">that the text does<br _ngcontent-pfq-c113="">not fit on a row.
+
+Bob--&gt;Alice: Checking with John...
+Alice-&gt;John: Yes... John, how are you?</code></pre><p _ngcontent-pfq-c113="">And this will produce a flow chart:</p>
+<pre class="language-mermaid" _ngcontent-pfq-c113=""><code class="language-mermaid" _ngcontent-pfq-c113="">graph LR
+A[Square Rect] -- Link text --&gt; B((Circle))
+A --&gt; C(Round Rect)
+B --&gt; D{Rhombus}
+C --&gt; D</code></pre><!--scullyContent-end--><scully-content _ngcontent-pfq-c113="" class="ng-star-inserted"></scully-content><!---->
+    <script>try {window['scullyContent'] = {cssId:"_ngcontent-pfq-c113",html:document.body.innerHTML.split('<!--scullyContent-begin-->')[1].split('<!--scullyContent-end-->')[0]};} catch(e) {console.error('scully could not parse content');}</script></div>
+  </div>
+</div>
+</app-blog><!----></main></div></mat-sidenav-content><!----></mat-sidenav-container></div></app-main-layout><!----></app-root-scully>
+  <script id="ScullyIO-transfer-state"></script><script src="runtime-es2015.306ac16643de2fe52e7f.js" type="module"></script><script src="runtime-es5.306ac16643de2fe52e7f.js" nomodule="" defer=""></script><script src="polyfills-es5.c3277da7b523800d2de4.js" nomodule="" defer=""></script><script src="polyfills-es2015.bc41055869a547cef3f1.js" type="module"></script><script src="scripts.45564e58e5450acb2b4e.js" defer=""></script><script src="main-es2015.fe3068cc0ecb91a264f9.js" type="module"></script><script src="main-es5.fe3068cc0ecb91a264f9.js" nomodule="" defer=""></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;"><div id="cdk-describedby-message-0">Partager le post</div><div id="cdk-describedby-message-1">Copier le lien vers cette section</div><div id="cdk-describedby-message-2">Copier le code</div></div></body></html>
