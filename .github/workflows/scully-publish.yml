@@ -21,5 +21,5 @@ jobs:
           deploy-branch: gh-pages
           build-args: --prod
 
-      - name: Index posts in Algolia search engine
-        run: npm run index-posts -- ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+      - name: Index notes in Algolia search engine
+        run: npm run index-notes -- ${{ secrets.ALGOLIA_ADMIN_API_KEY }}

@@ -3,11 +3,21 @@
 @mixin page-header-component-theme($theme) {
   $is-dark: map-get($theme, is-dark);
 
-  .page__title:after {
-    @if $is-dark {
-      color: rgb(216, 138, 252);
-    } @else {
-      color: #8aacfc;
+  .page {
+    &__title {
+      color: white;
+
+      &:after {
+        @if $is-dark {
+          color: rgb(216, 138, 252);
+        } @else {
+          color: #8aacfc;
+        }
+      }
+    }
+
+    &__description {
+      color: white;
     }
   }
 }

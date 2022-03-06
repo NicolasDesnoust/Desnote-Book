@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@mixin blog-component-theme($theme) {
+@mixin textual-view-component-theme($theme) {
   $background: map-get($theme, background);
   $accent: map-get($theme, accent);
   $is-dark: map-get($theme, is-dark);
@@ -9,7 +9,7 @@
   $code-block-background-color: mat-color($background, code-block);
 
   .main-content {
-    .post__subheader {
+    .note__subheader {
       @if $is-dark {
         color: #8b949e;
       } @else {

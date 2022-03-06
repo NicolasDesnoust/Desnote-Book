@@ -22,7 +22,7 @@ export class NavbarComponent {
   theme: Theme = this.themeHandler.theme;
   scullyDone: boolean;
   config = {
-    indexName: 'posts',
+    indexName: 'notes',
     searchClient: environment.searchClient,
   };
   showSearchBar = false;
@@ -38,7 +38,7 @@ export class NavbarComponent {
     this.showSearchBar = false;
   }
 
-  navigateToPostPage(option: any) {
+  navigateToNotePage(option: any) {
     this.router.navigate([option.route]);
   }
 

@@ -13,13 +13,13 @@
     <h2 class="card__title" mat-line>
       {{ item.title }}
     </h2>
-    <div class="card__body post-description" mat-line>
+    <div class="card__body note-description" mat-line>
       {{ item.body }}
     </div>
 
     <mat-chip-list
       *ngIf="item.footer"
-      aria-label="Post selection"
+      aria-label="Note selection"
       class="card__tags"
       mat-line
     >

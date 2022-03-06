@@ -3,7 +3,7 @@
   <!-- MAIN LIST ITEMS -->
   <ng-container *ngFor="let category of categories">
     <mat-expansion-panel
-      *ngIf="category.postsMetadata && category.postsMetadata.length > 0"
+      *ngIf="category.notesMetadata && category.notesMetadata.length > 0"
       routerLinkActive
       #rla="routerLinkActive"
       [expanded]="rla.isActive"
@@ -21,11 +21,11 @@
         mat-list-item
         [disableRipple]="true"
         matRipple
-        *ngFor="let postMetadata of category.postsMetadata"
-        [routerLink]="postMetadata.route"
+        *ngFor="let noteMetadata of category.notesMetadata"
+        [routerLink]="noteMetadata.route"
         routerLinkActive="active-link"
       >
-        <span matLine>{{ postMetadata.title }}</span>
+        <span matLine>{{ noteMetadata.title }}</span>
       </a>
     </mat-expansion-panel>
   </ng-container>

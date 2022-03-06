@@ -1,11 +1,9 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// Local variables //? move to variables.scss ?
 $navbar-height: 50px;
 $sub-header-height: 40px;
 
-// Styles
 .main-layout-container {
   min-height: 100vh;
 
@@ -58,8 +56,7 @@ $sub-header-height: 40px;
 
     ::ng-deep .mat-drawer-inner-container {
       display: flex;
-      app-left-sidenav,
-      app-table-of-contents {
+      app-left-sidenav {
         @include SMALLER_MONITOR_AND_ABOVE_MEDIAQUERY {
           padding-top: $sub-header-height;
         }
@@ -90,19 +87,6 @@ $sub-header-height: 40px;
     &.left-sidenav {
       border: 0;
     }
-
-    &.right-sidenav {
-      background-color: inherit;
-      border: none;
-
-      @include SMALLER_MONITOR_AND_BELOW_MEDIAQUERY {
-        transform: translate3d(100%, 0, 0) !important;
-      }
-
-      .external-toc {
-        margin: 2rem 2rem 2rem 0;
-      }
-    }
   }
 
   .mat-sidenav-content {
@@ -111,7 +95,7 @@ $sub-header-height: 40px;
     display: flex;
     align-content: center;
     justify-content: center;
-    margin: $sub-header-height 268px 0 268px;
+    margin: $sub-header-height 0 0 268px;
     padding: 1.5rem;
 
     @include SMALLER_MONITOR_AND_BELOW_MEDIAQUERY {
@@ -121,16 +105,5 @@ $sub-header-height: 40px;
       margin: 0 !important;
       padding: 0 !important;
     }
-  }
-}
-
-.main-content-wrapper {
-  padding: 0;
-  // border-radius: 2px;
-  width: 100%;
-  max-width: $medium-breakpoint;
-
-  .main-content {
-    min-height: 100vh;
   }
 }

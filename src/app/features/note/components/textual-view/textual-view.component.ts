@@ -1,22 +1,20 @@
 import { PlatformLocation } from '@angular/common';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { isScullyRunning } from '@scullyio/ng-lib';
 import ClipboardJS from 'clipboard';
-
-import { Post } from 'src/app/core/model/post';
-import { TableOfContentsService } from 'src/app/core/services/table-of-contents.service';
+import { Note } from 'src/app/core/model/note';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss'],
+  selector: 'app-textual-view',
+  templateUrl: './textual-view.component.html',
+  styleUrls: ['./textual-view.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class BlogComponent implements OnInit {
-  post: Post;
+export class TextualViewComponent implements OnInit {
+  @Input() note: Note;
   isScullyRunning: boolean = isScullyRunning();
   message = 'Lien copié dans le presse-papiers';
   url: string;
@@ -26,22 +24,15 @@ export class BlogComponent implements OnInit {
     return window.location.href;
   }
 
-  getEncodedPostTitle() {
-    return encodeURIComponent(this.post.metadata.title);
+  getEncodedNoteTitle() {
+    return encodeURIComponent(this.note.metadata.title);
   }
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
-    private tocService: TableOfContentsService,
     private _snackBar: MatSnackBar,
     private platformLocation: PlatformLocation
   ) {
-    this.route.data.subscribe((data: { post: Post }) => {
-      this.post = data.post;
-      this.tocService.updateTocContent(data.post.content);
-    });
-
     const location = (this.platformLocation as any).location.toString();
 
     if (location.includes('#')) {
@@ -68,7 +59,6 @@ export class BlogComponent implements OnInit {
   }
 
   openSnackBar(message: string) {
-    console.log(this.url);
     this._snackBar.open(message, null, {
       duration: 2000,
       panelClass: ['mat-toolbar', 'mat-accent'],

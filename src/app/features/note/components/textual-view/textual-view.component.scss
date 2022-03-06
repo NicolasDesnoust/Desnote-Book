@@ -11,7 +11,7 @@ $code-blocks-padding: 2rem;
   margin-top: 1.5rem !important;
 }
 
-::ng-deep .main-blog .blog-content .markdown-content > :nth-child(5) {
+::ng-deep .main-note .note-content .markdown-content > :nth-child(5) {
   padding-top: 1rem !important;
   margin-top: 0 !important;
 }
@@ -43,7 +43,7 @@ h1 {
   }
 }
 
-.post__subheader {
+.note__subheader {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -69,7 +69,7 @@ h1 {
   }
 }
 
-::ng-deep .main-blog {
+::ng-deep .main-note {
   padding: 2rem $code-blocks-padding 2rem $code-blocks-padding;
   font-size: 15px;
   overflow-x: hidden;
@@ -82,7 +82,7 @@ h1 {
     }
   }
 
-  ::ng-deep .blog-content {
+  ::ng-deep .note-content {
     .markdown-content > :nth-child(1),
     .markdown-content > :nth-child(2),
     .markdown-content > :nth-child(3) {

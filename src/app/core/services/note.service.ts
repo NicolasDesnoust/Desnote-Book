@@ -2,57 +2,56 @@ import { Injectable } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-
-import { PostMetadata } from '../model/post';
-import { filterNonBlogRoutes, isABlogRoute } from '../util/blog-utils';
+import { NoteMetadata } from '../model/note';
+import { isANote, keepNotesOnly as keepOnlyNotes } from '../util/note-utils';
 import { CategoryService } from './category.service';
-import { PostAdapterService } from './post-adapter.service';
+import { NoteAdapterService } from './note-adapter.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PostService {
+export class NoteService {
   constructor(
     private scully: ScullyRoutesService,
-    private postAdapter: PostAdapterService,
+    private noteAdapter: NoteAdapterService,
     private categoryService: CategoryService
   ) {}
 
-  get availablePostsMetadata$(): Observable<PostMetadata[]> {
+  get availableNotesMetadata$(): Observable<NoteMetadata[]> {
     return this.scully.available$.pipe(
-      map((scullyRoutes) => filterNonBlogRoutes(scullyRoutes)),
-      map((rawPostsMetadata) =>
-        this.postAdapter.toPostsMetadata(
-          rawPostsMetadata,
+      map((scullyRoutes) => keepOnlyNotes(scullyRoutes)),
+      map((rawNotesMetadata) =>
+        this.noteAdapter.toNotesMetadata(
+          rawNotesMetadata,
           this.categoryService.categories
         )
       )
     );
   }
 
-  get allPostsMetadata$(): Observable<PostMetadata[]> {
+  get allNotesMetadata$(): Observable<NoteMetadata[]> {
     return this.scully.allRoutes$.pipe(
-      map((scullyRoutes) => filterNonBlogRoutes(scullyRoutes)),
-      map((rawPostsMetadata) =>
-        this.postAdapter.toPostsMetadata(
-          rawPostsMetadata,
+      map((scullyRoutes) => keepOnlyNotes(scullyRoutes)),
+      map((rawNotesMetadata) =>
+        this.noteAdapter.toNotesMetadata(
+          rawNotesMetadata,
           this.categoryService.categories
         )
       )
     );
   }
 
-  getPostMetadata$(slug: string): Observable<PostMetadata> {
+  getNoteMetadata$(slug: string): Observable<NoteMetadata> {
     return this.scully.available$.pipe(
       map((availableRoutes) =>
         availableRoutes.find((r) =>
           this.basePathOnly(r.route.trim()).endsWith(slug)
         )
       ),
-      filter((scullyRoute) => isABlogRoute(scullyRoute)),
-      map((rawPostMetadata) =>
-        this.postAdapter.toPostMetadata(
-          rawPostMetadata,
+      filter((scullyRoute) => isANote(scullyRoute)),
+      map((rawNoteMetadata) =>
+        this.noteAdapter.toNoteMetadata(
+          rawNoteMetadata,
           this.categoryService.categories
         )
       )
@@ -69,5 +68,4 @@ export class PostService {
     const cleanedUpVersion = str.endsWith('/') ? str.slice(0, -1) : str;
     return cleanedUpVersion;
   };
-
 }

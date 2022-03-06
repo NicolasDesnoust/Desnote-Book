@@ -8,7 +8,7 @@ export const CATEGORY_ROUTES_RESOLVER_NAME = 'category-routes-resolver';
 /**
  * Plugin Category Routes Resolver
  *
- * Ce plugin indique à Scully quelles sont les routes à créer pour les categories de posts.
+ * Ce plugin indique à Scully quelles sont les routes à créer pour les categories de notes.
  * 
  */
 const categoryRoutesResolverPlugin: any = async (

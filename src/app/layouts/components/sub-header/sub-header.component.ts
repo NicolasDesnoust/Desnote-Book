@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class SubHeaderComponent {
   navItems = [
     {
-      link: '/blog',
-      label: 'Tutoriels',
+      link: '/notes',
+      label: 'Notes',
     },
     {
       link: '/cheet-sheets',

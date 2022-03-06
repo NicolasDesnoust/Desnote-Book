@@ -18,6 +18,7 @@ import {
   MOBILE_MEDIAQUERY,
   TABLET_MEDIAQUERY
 } from '../../../../data/mediaqueries';
+import { LayoutService } from '../../layout.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -38,6 +39,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   constructor(
     private categoryService: CategoryService,
     private breakpointObserver: BreakpointObserver,
+    private layoutService: LayoutService,
     @Inject(DOCUMENT) private document: Document
   ) {
     this.categories$ = this.categoryService.categories$;
@@ -71,6 +73,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
       } else if (scrollPosition > this.lastScrollTopValue) {
         this.hideNavbar = true;
       }
+      this.layoutService.updateSubNavbarVisibility(this.hideNavbar);
     }
 
     this.lastScrollTopValue = scrollPosition;

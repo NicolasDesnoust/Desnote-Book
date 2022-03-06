@@ -1,6 +1,6 @@
-import fs from 'fs';
 import algoliasearch from 'algoliasearch';
-import { PostMetadata } from 'src/app/core/model/post';
+import fs from 'fs';
+import { NoteMetadata } from 'src/app/core/model/note';
 
 if (process.argv.length < 3) {
   throw new Error(
@@ -16,25 +16,25 @@ const ROUTES_FILE_PATH = 'src/assets/scully-routes.json';
 const client = algoliasearch(APPLICATION_ID, ADMIN_API_KEY);
 const index = client.initIndex('posts');
 
-type AlgoliaRecord = PostMetadata & { objectID?: string };
+type AlgoliaRecord = NoteMetadata & { objectID?: string };
 
 /**
- * Read scullyRoutes.json and index blog routes in Algolia Search.
+ * Read scullyRoutes.json and index notes routes in Algolia Search.
  */
 fs.readFile(ROUTES_FILE_PATH, (fileErr, data) => {
   if (fileErr) {
     console.error(fileErr);
   } else {
     const routes: AlgoliaRecord[] = JSON.parse(data.toString());
-    const blogRoutes = routes.filter((route) =>
-      route.route.startsWith('/blog/')
+    const noteRoutes = routes.filter((route) =>
+      route.route.startsWith('/notes/')
     );
 
-    blogRoutes.forEach((blogRoute) => {
-      blogRoute.objectID = removeFileExtension(blogRoute.sourceFile);
+    noteRoutes.forEach((noteRoute) => {
+      noteRoute.objectID = removeFileExtension(noteRoute.sourceFile);
     });
 
-    index.addObjects(blogRoutes, (indexErr, content) => {
+    index.addObjects(noteRoutes, (indexErr, content) => {
       if (indexErr) {
         console.error(indexErr);
       } else {

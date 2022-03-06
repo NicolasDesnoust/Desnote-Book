@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { ScullyRoute } from '@scullyio/ng-lib';
 import { Category } from '../model/category';
-import { PostAdapterService } from './post-adapter.service';
+import { NoteAdapterService } from './note-adapter.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryAdapterService {
-  constructor(private postAdapter: PostAdapterService) {}
+  constructor(private noteAdapter: NoteAdapterService) {}
 
   toCategories(rawCategories: any[], scullyRoutes: ScullyRoute[]): Category[] {
     const categories: Category[] = rawCategories;
 
     scullyRoutes.forEach((scullyRoute) => {
       const category = categories.find(
-        (category) => category.id === scullyRoute.category
+        (currentCategory) => currentCategory.id === scullyRoute.category
       );
 
       if (!category) {
@@ -22,7 +22,7 @@ export class CategoryAdapterService {
           `Category not found for : ${JSON.stringify(scullyRoute)}`
         );
       } else {
-        category.postsMetadata.push(this.postAdapter.toPostMetadata(scullyRoute, categories));
+        category.notesMetadata.push(this.noteAdapter.toNoteMetadata(scullyRoute, categories));
       }
     });
 

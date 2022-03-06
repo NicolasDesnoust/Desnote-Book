@@ -12,7 +12,7 @@
     "format:write": "prettier \"src/**/*.{ts,html,md,scss,json}\" --write",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "index-posts": "ts-node --project scripts/scripts.tsconfig.json scripts/index-posts.ts"
+    "index-notes": "ts-node --project scripts/scripts.tsconfig.json scripts/index-notes.ts"
   },
   "private": true,
   "dependencies": {

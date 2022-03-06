@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { MainLayoutComponent } from './layouts/containers/main-layout/main-layout.component';
 import { NavbarOnlyLayoutComponent } from './layouts/containers/navbar-only-layout/navbar-only-layout.component';
+
 
 const routes: Routes = [
   {
@@ -34,9 +34,9 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: 'blog',
+        path: 'notes',
         loadChildren: () =>
-          import('./features/blog/blog.module').then((m) => m.BlogModule),
+          import('./features/note/note.module').then((m) => m.NoteModule),
       },
     ],
   },

@@ -4,10 +4,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { Category } from 'src/app/core/model/category';
-import { PostMetadata } from 'src/app/core/model/post';
+import { NoteMetadata } from 'src/app/core/model/note';
 import { CategoryService } from 'src/app/core/services/category.service';
 import { CardItem } from 'src/app/shared/model/card-item';
-
 
 @Component({
   selector: 'app-category-page',
@@ -23,7 +22,7 @@ import { CardItem } from 'src/app/shared/model/card-item';
           *ngIf="items$ | async as items"
           class="container-md category-page-content"
         >
-          <app-card-list [items]="items" title="Posts récents"></app-card-list>
+          <app-card-list [items]="items" title="Notes récentes"></app-card-list>
         </main>
       </div>
     </ng-container>
@@ -46,7 +45,7 @@ export class CategoryPageComponent {
     this.items$ = this.category$.pipe(
       map((category) =>
         this.toCardItems(
-          category.postsMetadata.sort((a, b) => {
+          category.notesMetadata.sort((a, b) => {
             return b.createdAt.getTime() - a.createdAt.getTime();
           })
         )
@@ -54,16 +53,16 @@ export class CategoryPageComponent {
     );
   }
 
-  private toCardItems(postsMetadata: PostMetadata[]): CardItem[] {
-    return postsMetadata.map((postMetadata) => ({
-      title: postMetadata.title,
-      body: postMetadata.description,
+  private toCardItems(notesMetadata: NoteMetadata[]): CardItem[] {
+    return notesMetadata.map((noteMetadata) => ({
+      title: noteMetadata.title,
+      body: noteMetadata.description,
       header: this.datePipe.transform(
-        postMetadata.createdAt.toISOString(),
+        noteMetadata.createdAt.toISOString(),
         'longDate',
         this.locale
       ),
-      route: postMetadata.route,
+      route: noteMetadata.route,
     }));
   }
 }

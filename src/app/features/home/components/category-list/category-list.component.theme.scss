@@ -6,10 +6,6 @@
   $background: map-get($theme, background);
   $is-dark: map-get($theme, is-dark);
 
-  .mat-chip.mat-standard-chip {
-    // color: mat-color($accent);
-  }
-
   .category-tag.mat-chip.mat-standard-chip {
     background-color: map-get($background, card);
   }

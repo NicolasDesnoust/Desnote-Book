@@ -1,0 +1,25 @@
+<div class="home-page">
+  <app-page-header
+    title="Desnote Book"
+    description="Carnet de notes personnel de Nicolas Desnoust"
+  ></app-page-header>
+
+  <main class="container-md home-content">
+    <div class="row d-flex py-4">
+      <div class="col-md-12 col-lg-9">
+        <app-card-list
+          [items]="items$ | async"
+          title="Notes récentes"
+        ></app-card-list>
+      </div>
+      <div class="col-md-12 category-list-top-divider">
+        <mat-divider class="my-4"></mat-divider>
+      </div>
+      <div class="col-md-12 col-lg-3">
+        <app-category-list
+          [categories]="categories$ | async"
+        ></app-category-list>
+      </div>
+    </div>
+  </main>
+</div>

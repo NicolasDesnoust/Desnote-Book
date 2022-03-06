@@ -3,9 +3,9 @@
 @import 'light-theme';
 @import 'dark-theme';
 
-@import '../../app/layouts/components/table-of-contents/table-of-contents.component.theme';
+@import '../app/features/note/components/table-of-contents/table-of-contents.component.theme';
 @import '../app/layouts/containers/main-layout/main-layout.component.theme';
-@import '../app/features/blog/components/blog/blog.component.theme';
+@import '../app/features/note/components/textual-view/textual-view.component.theme';
 @import '../app/layouts/components/navbar/navbar.component.theme';
 @import '../app/layouts/components/left-sidenav/left-sidenav.component.theme';
 @import '../app/features/home/components/category-list/category-list.component.theme';
@@ -156,7 +156,7 @@ $app-typography: mat-typography-config(
     //* Inclure ici les mixins de chaque composant ayant un thème
     @include table-of-contents-component-theme($theme);
     @include main-layout-component-theme($theme);
-    @include blog-component-theme($theme);
+    @include textual-view-component-theme($theme);
     @include navbar-component-theme($theme);
     @include left-sidenav-component-theme($theme);
     @include category-list-component-theme($theme);

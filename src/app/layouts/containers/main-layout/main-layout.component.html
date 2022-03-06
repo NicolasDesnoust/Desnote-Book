@@ -27,26 +27,8 @@
       <app-left-sidenav [categories]="categories$ | async"></app-left-sidenav>
     </mat-sidenav>
 
-    <!-- Main content -->
     <mat-sidenav-content class="with-sub-navbar-visible p-4">
-      <div class="main-content-wrapper" role="main" addCodeHeaders>
-        <main class="main-content">
-          <router-outlet></router-outlet>
-        </main>
-      </div>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
-
-    <!-- Right Sidenav -->
-    <mat-sidenav
-      mode="side"
-      position="end"
-      opened
-      class="mat-elevation-z0 right-sidenav with-sub-navbar-visible"
-      [ngClass]="{
-        'without-sub-navbar': hideNavbar
-      }"
-    >
-      <app-table-of-contents class="external-toc"></app-table-of-contents>
-    </mat-sidenav>
   </mat-sidenav-container>
 </div>

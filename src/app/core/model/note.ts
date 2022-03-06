@@ -1,13 +1,12 @@
 import { ScullyRoute } from "@scullyio/ng-lib";
-
 import { Category } from "./category";
 
-export interface Post {
+export interface Note {
    content: string;
-   metadata: PostMetadata;
+   metadata: NoteMetadata;
 }
 
-export interface PostMetadata extends ScullyRoute {
+export interface NoteMetadata extends ScullyRoute {
    category: Category;
    createdAt: Date;
    description: string;

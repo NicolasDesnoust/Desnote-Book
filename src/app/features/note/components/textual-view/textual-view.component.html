@@ -1,17 +1,17 @@
-<div class="main-blog">
-  <h1>{{ post.metadata.title }}</h1>
+<div class="main-note">
+  <h1>{{ note.metadata.title }}</h1>
 
-  <div class="post__subheader">
+  <div class="note__subheader">
     <i-feather class="clock" name="clock"></i-feather>
-    <span>{{ post.metadata.createdAt | date }}</span>
+    <span>{{ note.metadata.createdAt | date }}</span>
     <span class="ml-2 mr-2">·</span>
     <span>
-      {{ post.metadata.readingTime | number: '1.0-0' }} min. de lecture
+      {{ note.metadata.readingTime | number: '1.0-0' }} min. de lecture
     </span>
     <span class="spacer"></span>
     <button
       mat-icon-button
-      matTooltip="Partager le post"
+      matTooltip="Partager la note"
       [matMenuTriggerFor]="shareMenu"
     >
       <i-feather name="share"></i-feather>
@@ -59,14 +59,14 @@
   </div>
 
   <!-- This is where Scully will inject the static HTML -->
-  <div class="blog-content">
+  <div class="note-content">
     <markdown
       class="markdown-content"
       emoji
       testDir
       addCodeHeaders
       (error)="onError()"
-      [data]="post.content"
+      [data]="note.content"
     >
     </markdown>
     <div style="display: none">

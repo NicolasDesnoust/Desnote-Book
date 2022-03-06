@@ -19,7 +19,7 @@ const {
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 setPluginConfig(baseHrefRewrite, { href: '/Desnote-Book/' });
-setPluginConfig(timeToRead, { path: '/blog' } as TimeToReadOptions);
+setPluginConfig(timeToRead, { path: '/notes' } as TimeToReadOptions);
 
 /* -------------------------------------------------------------------------- */
 /*                   Configuration de Scully pour le projet                   */
@@ -37,11 +37,11 @@ export const config: ScullyConfig = {
   outDir: './dist/static',
   defaultPostRenderers,
   routes: {
-    '/blog/:slug': {
+    '/notes/:slug': {
       type: RouteTypes.contentFolder,
       postRenderers: [docLink, ...defaultPostRenderers],
       slug: {
-        folder: './src/assets/blog',
+        folder: './src/assets/notes',
       },
       manualIdleCheck: true,
     },
